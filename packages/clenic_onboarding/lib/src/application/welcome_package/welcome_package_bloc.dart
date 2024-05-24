@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -41,17 +40,17 @@ class WelcomePackageBloc
   WelcomePackageBloc() : super(const WelcomePackageState.initState()) {
     on<OnInit>(_onInit);
     on<OnPageChanged>(_onPageChanged);
-    on<OnShowButton>(_onShowButton);
   }
 
-  FutureOr<void> _onInit(OnInit event, Emitter<WelcomePackageState> emit) {}
+  FutureOr<void> _onInit(
+      OnInit event, Emitter<WelcomePackageState> emit) async {
+    final listDataMaps = listData;
+    emit(GetListDataSuccess(listDataMaps));
+  }
 
   FutureOr<void> _onPageChanged(
-      OnPageChanged event, Emitter<WelcomePackageState> emit) {
-    final selections = event.selection;
+      OnPageChanged event, Emitter<WelcomePackageState> emit) async {
+    var selections = event.selection;
     emit(OnPageChangedSuccess(selections));
   }
-
-  FutureOr<void> _onShowButton(
-      OnShowButton event, Emitter<WelcomePackageState> emit) {}
 }

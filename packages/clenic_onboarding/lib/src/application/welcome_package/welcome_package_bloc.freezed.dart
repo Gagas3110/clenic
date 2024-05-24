@@ -20,21 +20,18 @@ mixin _$WelcomePackageEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() onInit,
     required TResult Function(int selection) onPageChanged,
-    required TResult Function(int selection) onShowButton,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? onInit,
     TResult? Function(int selection)? onPageChanged,
-    TResult? Function(int selection)? onShowButton,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? onInit,
     TResult Function(int selection)? onPageChanged,
-    TResult Function(int selection)? onShowButton,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -42,21 +39,18 @@ mixin _$WelcomePackageEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(OnInit value) onInit,
     required TResult Function(OnPageChanged value) onPageChanged,
-    required TResult Function(OnShowButton value) onShowButton,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(OnInit value)? onInit,
     TResult? Function(OnPageChanged value)? onPageChanged,
-    TResult? Function(OnShowButton value)? onShowButton,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(OnInit value)? onInit,
     TResult Function(OnPageChanged value)? onPageChanged,
-    TResult Function(OnShowButton value)? onShowButton,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -120,7 +114,6 @@ class _$OnInitImpl implements OnInit {
   TResult when<TResult extends Object?>({
     required TResult Function() onInit,
     required TResult Function(int selection) onPageChanged,
-    required TResult Function(int selection) onShowButton,
   }) {
     return onInit();
   }
@@ -130,7 +123,6 @@ class _$OnInitImpl implements OnInit {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? onInit,
     TResult? Function(int selection)? onPageChanged,
-    TResult? Function(int selection)? onShowButton,
   }) {
     return onInit?.call();
   }
@@ -140,7 +132,6 @@ class _$OnInitImpl implements OnInit {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? onInit,
     TResult Function(int selection)? onPageChanged,
-    TResult Function(int selection)? onShowButton,
     required TResult orElse(),
   }) {
     if (onInit != null) {
@@ -154,7 +145,6 @@ class _$OnInitImpl implements OnInit {
   TResult map<TResult extends Object?>({
     required TResult Function(OnInit value) onInit,
     required TResult Function(OnPageChanged value) onPageChanged,
-    required TResult Function(OnShowButton value) onShowButton,
   }) {
     return onInit(this);
   }
@@ -164,7 +154,6 @@ class _$OnInitImpl implements OnInit {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(OnInit value)? onInit,
     TResult? Function(OnPageChanged value)? onPageChanged,
-    TResult? Function(OnShowButton value)? onShowButton,
   }) {
     return onInit?.call(this);
   }
@@ -174,7 +163,6 @@ class _$OnInitImpl implements OnInit {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(OnInit value)? onInit,
     TResult Function(OnPageChanged value)? onPageChanged,
-    TResult Function(OnShowButton value)? onShowButton,
     required TResult orElse(),
   }) {
     if (onInit != null) {
@@ -255,7 +243,6 @@ class _$OnPageChangedImpl implements OnPageChanged {
   TResult when<TResult extends Object?>({
     required TResult Function() onInit,
     required TResult Function(int selection) onPageChanged,
-    required TResult Function(int selection) onShowButton,
   }) {
     return onPageChanged(selection);
   }
@@ -265,7 +252,6 @@ class _$OnPageChangedImpl implements OnPageChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? onInit,
     TResult? Function(int selection)? onPageChanged,
-    TResult? Function(int selection)? onShowButton,
   }) {
     return onPageChanged?.call(selection);
   }
@@ -275,7 +261,6 @@ class _$OnPageChangedImpl implements OnPageChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? onInit,
     TResult Function(int selection)? onPageChanged,
-    TResult Function(int selection)? onShowButton,
     required TResult orElse(),
   }) {
     if (onPageChanged != null) {
@@ -289,7 +274,6 @@ class _$OnPageChangedImpl implements OnPageChanged {
   TResult map<TResult extends Object?>({
     required TResult Function(OnInit value) onInit,
     required TResult Function(OnPageChanged value) onPageChanged,
-    required TResult Function(OnShowButton value) onShowButton,
   }) {
     return onPageChanged(this);
   }
@@ -299,7 +283,6 @@ class _$OnPageChangedImpl implements OnPageChanged {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(OnInit value)? onInit,
     TResult? Function(OnPageChanged value)? onPageChanged,
-    TResult? Function(OnShowButton value)? onShowButton,
   }) {
     return onPageChanged?.call(this);
   }
@@ -309,7 +292,6 @@ class _$OnPageChangedImpl implements OnPageChanged {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(OnInit value)? onInit,
     TResult Function(OnPageChanged value)? onPageChanged,
-    TResult Function(OnShowButton value)? onShowButton,
     required TResult orElse(),
   }) {
     if (onPageChanged != null) {
@@ -329,153 +311,12 @@ abstract class OnPageChanged implements WelcomePackageEvent {
 }
 
 /// @nodoc
-abstract class _$$OnShowButtonImplCopyWith<$Res> {
-  factory _$$OnShowButtonImplCopyWith(
-          _$OnShowButtonImpl value, $Res Function(_$OnShowButtonImpl) then) =
-      __$$OnShowButtonImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({int selection});
-}
-
-/// @nodoc
-class __$$OnShowButtonImplCopyWithImpl<$Res>
-    extends _$WelcomePackageEventCopyWithImpl<$Res, _$OnShowButtonImpl>
-    implements _$$OnShowButtonImplCopyWith<$Res> {
-  __$$OnShowButtonImplCopyWithImpl(
-      _$OnShowButtonImpl _value, $Res Function(_$OnShowButtonImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? selection = null,
-  }) {
-    return _then(_$OnShowButtonImpl(
-      null == selection
-          ? _value.selection
-          : selection // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$OnShowButtonImpl implements OnShowButton {
-  const _$OnShowButtonImpl(this.selection);
-
-  @override
-  final int selection;
-
-  @override
-  String toString() {
-    return 'WelcomePackageEvent.onShowButton(selection: $selection)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$OnShowButtonImpl &&
-            (identical(other.selection, selection) ||
-                other.selection == selection));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, selection);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$OnShowButtonImplCopyWith<_$OnShowButtonImpl> get copyWith =>
-      __$$OnShowButtonImplCopyWithImpl<_$OnShowButtonImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() onInit,
-    required TResult Function(int selection) onPageChanged,
-    required TResult Function(int selection) onShowButton,
-  }) {
-    return onShowButton(selection);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? onInit,
-    TResult? Function(int selection)? onPageChanged,
-    TResult? Function(int selection)? onShowButton,
-  }) {
-    return onShowButton?.call(selection);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? onInit,
-    TResult Function(int selection)? onPageChanged,
-    TResult Function(int selection)? onShowButton,
-    required TResult orElse(),
-  }) {
-    if (onShowButton != null) {
-      return onShowButton(selection);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(OnInit value) onInit,
-    required TResult Function(OnPageChanged value) onPageChanged,
-    required TResult Function(OnShowButton value) onShowButton,
-  }) {
-    return onShowButton(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(OnInit value)? onInit,
-    TResult? Function(OnPageChanged value)? onPageChanged,
-    TResult? Function(OnShowButton value)? onShowButton,
-  }) {
-    return onShowButton?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(OnInit value)? onInit,
-    TResult Function(OnPageChanged value)? onPageChanged,
-    TResult Function(OnShowButton value)? onShowButton,
-    required TResult orElse(),
-  }) {
-    if (onShowButton != null) {
-      return onShowButton(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class OnShowButton implements WelcomePackageEvent {
-  const factory OnShowButton(final int selection) = _$OnShowButtonImpl;
-
-  int get selection;
-  @JsonKey(ignore: true)
-  _$$OnShowButtonImplCopyWith<_$OnShowButtonImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
 mixin _$WelcomePackageState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initState,
     required TResult Function(int selection) onPageChangedSuccess,
     required TResult Function(List<Map> listData) getListDataSuccess,
-    required TResult Function(Widget widget) showButtonCondition,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -483,7 +324,6 @@ mixin _$WelcomePackageState {
     TResult? Function()? initState,
     TResult? Function(int selection)? onPageChangedSuccess,
     TResult? Function(List<Map> listData)? getListDataSuccess,
-    TResult? Function(Widget widget)? showButtonCondition,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -491,7 +331,6 @@ mixin _$WelcomePackageState {
     TResult Function()? initState,
     TResult Function(int selection)? onPageChangedSuccess,
     TResult Function(List<Map> listData)? getListDataSuccess,
-    TResult Function(Widget widget)? showButtonCondition,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -500,7 +339,6 @@ mixin _$WelcomePackageState {
     required TResult Function(InitState value) initState,
     required TResult Function(OnPageChangedSuccess value) onPageChangedSuccess,
     required TResult Function(GetListDataSuccess value) getListDataSuccess,
-    required TResult Function(ShowButtonCondition value) showButtonCondition,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -508,7 +346,6 @@ mixin _$WelcomePackageState {
     TResult? Function(InitState value)? initState,
     TResult? Function(OnPageChangedSuccess value)? onPageChangedSuccess,
     TResult? Function(GetListDataSuccess value)? getListDataSuccess,
-    TResult? Function(ShowButtonCondition value)? showButtonCondition,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -516,7 +353,6 @@ mixin _$WelcomePackageState {
     TResult Function(InitState value)? initState,
     TResult Function(OnPageChangedSuccess value)? onPageChangedSuccess,
     TResult Function(GetListDataSuccess value)? getListDataSuccess,
-    TResult Function(ShowButtonCondition value)? showButtonCondition,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -581,7 +417,6 @@ class _$InitStateImpl implements InitState {
     required TResult Function() initState,
     required TResult Function(int selection) onPageChangedSuccess,
     required TResult Function(List<Map> listData) getListDataSuccess,
-    required TResult Function(Widget widget) showButtonCondition,
   }) {
     return initState();
   }
@@ -592,7 +427,6 @@ class _$InitStateImpl implements InitState {
     TResult? Function()? initState,
     TResult? Function(int selection)? onPageChangedSuccess,
     TResult? Function(List<Map> listData)? getListDataSuccess,
-    TResult? Function(Widget widget)? showButtonCondition,
   }) {
     return initState?.call();
   }
@@ -603,7 +437,6 @@ class _$InitStateImpl implements InitState {
     TResult Function()? initState,
     TResult Function(int selection)? onPageChangedSuccess,
     TResult Function(List<Map> listData)? getListDataSuccess,
-    TResult Function(Widget widget)? showButtonCondition,
     required TResult orElse(),
   }) {
     if (initState != null) {
@@ -618,7 +451,6 @@ class _$InitStateImpl implements InitState {
     required TResult Function(InitState value) initState,
     required TResult Function(OnPageChangedSuccess value) onPageChangedSuccess,
     required TResult Function(GetListDataSuccess value) getListDataSuccess,
-    required TResult Function(ShowButtonCondition value) showButtonCondition,
   }) {
     return initState(this);
   }
@@ -629,7 +461,6 @@ class _$InitStateImpl implements InitState {
     TResult? Function(InitState value)? initState,
     TResult? Function(OnPageChangedSuccess value)? onPageChangedSuccess,
     TResult? Function(GetListDataSuccess value)? getListDataSuccess,
-    TResult? Function(ShowButtonCondition value)? showButtonCondition,
   }) {
     return initState?.call(this);
   }
@@ -640,7 +471,6 @@ class _$InitStateImpl implements InitState {
     TResult Function(InitState value)? initState,
     TResult Function(OnPageChangedSuccess value)? onPageChangedSuccess,
     TResult Function(GetListDataSuccess value)? getListDataSuccess,
-    TResult Function(ShowButtonCondition value)? showButtonCondition,
     required TResult orElse(),
   }) {
     if (initState != null) {
@@ -724,7 +554,6 @@ class _$OnPageChangedSuccessImpl implements OnPageChangedSuccess {
     required TResult Function() initState,
     required TResult Function(int selection) onPageChangedSuccess,
     required TResult Function(List<Map> listData) getListDataSuccess,
-    required TResult Function(Widget widget) showButtonCondition,
   }) {
     return onPageChangedSuccess(selection);
   }
@@ -735,7 +564,6 @@ class _$OnPageChangedSuccessImpl implements OnPageChangedSuccess {
     TResult? Function()? initState,
     TResult? Function(int selection)? onPageChangedSuccess,
     TResult? Function(List<Map> listData)? getListDataSuccess,
-    TResult? Function(Widget widget)? showButtonCondition,
   }) {
     return onPageChangedSuccess?.call(selection);
   }
@@ -746,7 +574,6 @@ class _$OnPageChangedSuccessImpl implements OnPageChangedSuccess {
     TResult Function()? initState,
     TResult Function(int selection)? onPageChangedSuccess,
     TResult Function(List<Map> listData)? getListDataSuccess,
-    TResult Function(Widget widget)? showButtonCondition,
     required TResult orElse(),
   }) {
     if (onPageChangedSuccess != null) {
@@ -761,7 +588,6 @@ class _$OnPageChangedSuccessImpl implements OnPageChangedSuccess {
     required TResult Function(InitState value) initState,
     required TResult Function(OnPageChangedSuccess value) onPageChangedSuccess,
     required TResult Function(GetListDataSuccess value) getListDataSuccess,
-    required TResult Function(ShowButtonCondition value) showButtonCondition,
   }) {
     return onPageChangedSuccess(this);
   }
@@ -772,7 +598,6 @@ class _$OnPageChangedSuccessImpl implements OnPageChangedSuccess {
     TResult? Function(InitState value)? initState,
     TResult? Function(OnPageChangedSuccess value)? onPageChangedSuccess,
     TResult? Function(GetListDataSuccess value)? getListDataSuccess,
-    TResult? Function(ShowButtonCondition value)? showButtonCondition,
   }) {
     return onPageChangedSuccess?.call(this);
   }
@@ -783,7 +608,6 @@ class _$OnPageChangedSuccessImpl implements OnPageChangedSuccess {
     TResult Function(InitState value)? initState,
     TResult Function(OnPageChangedSuccess value)? onPageChangedSuccess,
     TResult Function(GetListDataSuccess value)? getListDataSuccess,
-    TResult Function(ShowButtonCondition value)? showButtonCondition,
     required TResult orElse(),
   }) {
     if (onPageChangedSuccess != null) {
@@ -878,7 +702,6 @@ class _$GetListDataSuccessImpl implements GetListDataSuccess {
     required TResult Function() initState,
     required TResult Function(int selection) onPageChangedSuccess,
     required TResult Function(List<Map> listData) getListDataSuccess,
-    required TResult Function(Widget widget) showButtonCondition,
   }) {
     return getListDataSuccess(listData);
   }
@@ -889,7 +712,6 @@ class _$GetListDataSuccessImpl implements GetListDataSuccess {
     TResult? Function()? initState,
     TResult? Function(int selection)? onPageChangedSuccess,
     TResult? Function(List<Map> listData)? getListDataSuccess,
-    TResult? Function(Widget widget)? showButtonCondition,
   }) {
     return getListDataSuccess?.call(listData);
   }
@@ -900,7 +722,6 @@ class _$GetListDataSuccessImpl implements GetListDataSuccess {
     TResult Function()? initState,
     TResult Function(int selection)? onPageChangedSuccess,
     TResult Function(List<Map> listData)? getListDataSuccess,
-    TResult Function(Widget widget)? showButtonCondition,
     required TResult orElse(),
   }) {
     if (getListDataSuccess != null) {
@@ -915,7 +736,6 @@ class _$GetListDataSuccessImpl implements GetListDataSuccess {
     required TResult Function(InitState value) initState,
     required TResult Function(OnPageChangedSuccess value) onPageChangedSuccess,
     required TResult Function(GetListDataSuccess value) getListDataSuccess,
-    required TResult Function(ShowButtonCondition value) showButtonCondition,
   }) {
     return getListDataSuccess(this);
   }
@@ -926,7 +746,6 @@ class _$GetListDataSuccessImpl implements GetListDataSuccess {
     TResult? Function(InitState value)? initState,
     TResult? Function(OnPageChangedSuccess value)? onPageChangedSuccess,
     TResult? Function(GetListDataSuccess value)? getListDataSuccess,
-    TResult? Function(ShowButtonCondition value)? showButtonCondition,
   }) {
     return getListDataSuccess?.call(this);
   }
@@ -937,7 +756,6 @@ class _$GetListDataSuccessImpl implements GetListDataSuccess {
     TResult Function(InitState value)? initState,
     TResult Function(OnPageChangedSuccess value)? onPageChangedSuccess,
     TResult Function(GetListDataSuccess value)? getListDataSuccess,
-    TResult Function(ShowButtonCondition value)? showButtonCondition,
     required TResult orElse(),
   }) {
     if (getListDataSuccess != null) {
@@ -954,152 +772,5 @@ abstract class GetListDataSuccess implements WelcomePackageState {
   List<Map> get listData;
   @JsonKey(ignore: true)
   _$$GetListDataSuccessImplCopyWith<_$GetListDataSuccessImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$ShowButtonConditionImplCopyWith<$Res> {
-  factory _$$ShowButtonConditionImplCopyWith(_$ShowButtonConditionImpl value,
-          $Res Function(_$ShowButtonConditionImpl) then) =
-      __$$ShowButtonConditionImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({Widget widget});
-}
-
-/// @nodoc
-class __$$ShowButtonConditionImplCopyWithImpl<$Res>
-    extends _$WelcomePackageStateCopyWithImpl<$Res, _$ShowButtonConditionImpl>
-    implements _$$ShowButtonConditionImplCopyWith<$Res> {
-  __$$ShowButtonConditionImplCopyWithImpl(_$ShowButtonConditionImpl _value,
-      $Res Function(_$ShowButtonConditionImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? widget = null,
-  }) {
-    return _then(_$ShowButtonConditionImpl(
-      null == widget
-          ? _value.widget
-          : widget // ignore: cast_nullable_to_non_nullable
-              as Widget,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$ShowButtonConditionImpl implements ShowButtonCondition {
-  const _$ShowButtonConditionImpl(this.widget);
-
-  @override
-  final Widget widget;
-
-  @override
-  String toString() {
-    return 'WelcomePackageState.showButtonCondition(widget: $widget)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ShowButtonConditionImpl &&
-            (identical(other.widget, widget) || other.widget == widget));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, widget);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ShowButtonConditionImplCopyWith<_$ShowButtonConditionImpl> get copyWith =>
-      __$$ShowButtonConditionImplCopyWithImpl<_$ShowButtonConditionImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initState,
-    required TResult Function(int selection) onPageChangedSuccess,
-    required TResult Function(List<Map> listData) getListDataSuccess,
-    required TResult Function(Widget widget) showButtonCondition,
-  }) {
-    return showButtonCondition(widget);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initState,
-    TResult? Function(int selection)? onPageChangedSuccess,
-    TResult? Function(List<Map> listData)? getListDataSuccess,
-    TResult? Function(Widget widget)? showButtonCondition,
-  }) {
-    return showButtonCondition?.call(widget);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initState,
-    TResult Function(int selection)? onPageChangedSuccess,
-    TResult Function(List<Map> listData)? getListDataSuccess,
-    TResult Function(Widget widget)? showButtonCondition,
-    required TResult orElse(),
-  }) {
-    if (showButtonCondition != null) {
-      return showButtonCondition(widget);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(InitState value) initState,
-    required TResult Function(OnPageChangedSuccess value) onPageChangedSuccess,
-    required TResult Function(GetListDataSuccess value) getListDataSuccess,
-    required TResult Function(ShowButtonCondition value) showButtonCondition,
-  }) {
-    return showButtonCondition(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(InitState value)? initState,
-    TResult? Function(OnPageChangedSuccess value)? onPageChangedSuccess,
-    TResult? Function(GetListDataSuccess value)? getListDataSuccess,
-    TResult? Function(ShowButtonCondition value)? showButtonCondition,
-  }) {
-    return showButtonCondition?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(InitState value)? initState,
-    TResult Function(OnPageChangedSuccess value)? onPageChangedSuccess,
-    TResult Function(GetListDataSuccess value)? getListDataSuccess,
-    TResult Function(ShowButtonCondition value)? showButtonCondition,
-    required TResult orElse(),
-  }) {
-    if (showButtonCondition != null) {
-      return showButtonCondition(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ShowButtonCondition implements WelcomePackageState {
-  const factory ShowButtonCondition(final Widget widget) =
-      _$ShowButtonConditionImpl;
-
-  Widget get widget;
-  @JsonKey(ignore: true)
-  _$$ShowButtonConditionImplCopyWith<_$ShowButtonConditionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
