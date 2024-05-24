@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "clenic_application",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "clenic_application (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "clenic_application (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "clenic_onboarding",
+            "cwd": "packages/clenic_onboarding",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "clenic_onboarding (profile mode)",
+            "cwd": "packages/clenic_onboarding",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "clenic_onboarding (release mode)",
+            "cwd": "packages/clenic_onboarding",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
