@@ -41,6 +41,8 @@ dependencies:
   clenic_ui:
     path: packages/clenic_ui
   google_fonts: ^6.2.1
+  firebase_core: ^2.32.0
+  firebase_messaging: ^14.9.4
 
 dev_dependencies:
   flutter_test:

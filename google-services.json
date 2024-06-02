@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "292013535702",
+    "project_id": "clenic-apps-46ec9",
+    "storage_bucket": "clenic-apps-46ec9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292013535702:android:a1d39e7e1287d5751b7477",
+        "android_client_info": {
+          "package_name": "com.example.clenic_application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBH-t2cCoT3xUD_Ii2RflbbkcDEZ61R7NA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
