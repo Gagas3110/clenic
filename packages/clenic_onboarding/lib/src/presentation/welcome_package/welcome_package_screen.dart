@@ -1,3 +1,4 @@
+import 'package:clenic_home/clenic_home.dart';
 import 'package:clenic_onboarding/src/application/welcome_package/welcome_package_bloc.dart';
 import 'package:clenic_ui/widgets/buttons/button_styles/clenic_button_styles.dart';
 import 'package:clenic_ui/widgets/buttons/clenic_button.dart';
@@ -150,8 +151,11 @@ class _WelcomePackageBodyState extends State<WelcomePackageBody> {
         Expanded(
           child: ClenicButton(
             onPressed: () {
-              // Navigator.of(context).push(MaterialPageRoute(
-              //     builder: (context) => const SignupScreen()));
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const HomePage(),
+                ),
+              );
             },
             title: 'Mulai',
             style: PrimaryClenicButtonStyle.style,
