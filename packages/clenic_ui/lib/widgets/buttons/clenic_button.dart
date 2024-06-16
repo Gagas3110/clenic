@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:clenic_ui/extension/clenic_auth_extension.dart';
 import 'package:flutter/material.dart';
 
 import 'button_styles/clenic_button_styles.dart';
@@ -73,15 +74,13 @@ class ClenicButton extends StatelessWidget {
                       child: Center(
                         child: Row(
                           children: [
-                            // Visibility(
-                            //   visible: isVisibleLoad,
-                            //   child: SizedBox(
-                            //     width: 20,
-                            //     height: 20,
-                            //     child: context.circularprogress(),
-                            //   ),
-                            // ),
-                            // const SizedBox(width: 20),
+                            if (isVisibleLoad)
+                              SizedBox(
+                                width: 20,
+                                height: 20,
+                                child: context.circularprogress(),
+                              ),
+                            const SizedBox(width: 20),
                             Text(
                               title,
                               style: Theme.of(context)

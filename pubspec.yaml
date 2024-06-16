@@ -40,9 +40,12 @@ dependencies:
     path: packages/clenic_onboarding
   clenic_ui:
     path: packages/clenic_ui
+  clenic_auth:
+    path: packages/clenic_auth
   google_fonts: ^6.2.1
-  firebase_core: ^2.32.0
+  firebase_core: ^2.24.2
   firebase_messaging: ^14.9.4
+  get_it: ^7.6.0
 
 dev_dependencies:
   flutter_test:
