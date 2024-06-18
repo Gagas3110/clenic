@@ -140,6 +140,9 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     emit(const AuthLoading());
     try {
       await _authRepo.signInWithGoogle();
+      final user = _authRepo.authStateChanges();
+      final currentUser = _authRepo.currentUser;
+      print(currentUser);
       emit(const AuthSuccess());
     } catch (e) {
       emit(AuthFailure(e.toString()));

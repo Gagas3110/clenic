@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
 import '../../../../domain/auth/firebase_auth_request.dart';
 import 'i_auth_remote_datasource.dart';
@@ -7,7 +8,8 @@ import 'i_auth_remote_datasource.dart';
 class AuthRemoteDataSources implements IAuthRemoteDataSources {
   final FirebaseAuth _firebaseAuth;
   final GoogleAuthProvider _googleAuthProvider;
-  AuthRemoteDataSources(this._googleAuthProvider,
+  final GoogleSignIn _googleSignIn;
+  AuthRemoteDataSources(this._googleAuthProvider, this._googleSignIn,
       {required FirebaseAuth firebaseAuth})
       : _firebaseAuth = firebaseAuth;
   @override
@@ -35,10 +37,12 @@ class AuthRemoteDataSources implements IAuthRemoteDataSources {
   @override
   Future<void> signOut() async {
     await _firebaseAuth.signOut();
+    //await _googleSignIn.signOut();
   }
 
   @override
   Future<void> signWithGoogle() async {
     await _firebaseAuth.signInWithProvider(_googleAuthProvider);
+    //await _googleSignIn.signIn();
   }
 }

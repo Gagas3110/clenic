@@ -24,13 +24,13 @@ import 'src/infrastructure/auth/datasources/local/auth/i_login_local_datasources
     as _i13;
 import 'src/infrastructure/auth/datasources/local/auth/login_local_datasource.dart'
     as _i14;
-import 'src/infrastructure/auth/datasources/remote/api/login_api.dart' as _i10;
+import 'src/infrastructure/auth/datasources/remote/api/login_api.dart' as _i8;
 import 'src/infrastructure/auth/datasources/remote/auth_remote_datasources.dart'
-    as _i9;
+    as _i10;
 import 'src/infrastructure/auth/datasources/remote/di/register_api.dart'
     as _i19;
 import 'src/infrastructure/auth/datasources/remote/i_auth_remote_datasource.dart'
-    as _i8;
+    as _i9;
 import 'src/infrastructure/auth/repositories/auth_repository.dart' as _i16;
 import 'src/infrastructure/core/i_network_info.dart' as _i12;
 import 'src/infrastructure/core/injection_module.dart' as _i18;
@@ -59,22 +59,23 @@ extension GetItInjectableX on _i1.GetIt {
     gh.lazySingleton<_i7.GoogleSignIn>(() => injectionModules.googleSignIn);
     gh.lazySingleton<_i6.GoogleAuthProvider>(
         () => injectionModules.googleAuthProvider);
-    gh.lazySingleton<_i8.IAuthRemoteDataSources>(
-        () => _i9.AuthRemoteDataSources(
+    gh.lazySingleton<_i8.LoginApi>(
+        () => registerApi.getloginApi(gh<_i4.Dio>()));
+    gh.lazySingleton<_i9.IAuthRemoteDataSources>(
+        () => _i10.AuthRemoteDataSources(
               gh<_i6.GoogleAuthProvider>(),
+              gh<_i7.GoogleSignIn>(),
               firebaseAuth: gh<_i6.FirebaseAuth>(),
             ));
-    gh.lazySingleton<_i10.LoginApi>(
-        () => registerApi.getloginApi(gh<_i4.Dio>()));
     gh.lazySingleton<_i11.NetworkInfo>(
         () => _i12.INetworkInfo(gh<_i5.InternetConnectionChecker>()));
     gh.lazySingleton<_i13.ILoginLocalDataSource>(
         () => _i14.LoginLocalDataSource(gh<_i3.SharedPreferences>()));
     gh.lazySingleton<_i15.IAuthRepository>(() => _i16.AuthRepository(
-          gh<_i10.LoginApi>(),
+          gh<_i8.LoginApi>(),
           gh<_i11.NetworkInfo>(),
           gh<_i13.ILoginLocalDataSource>(),
-          gh<_i8.IAuthRemoteDataSources>(),
+          gh<_i9.IAuthRemoteDataSources>(),
         ));
     gh.factory<_i17.AuthBloc>(() => _i17.AuthBloc(gh<_i15.IAuthRepository>()));
     return this;
