@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 class ClenicFormTextField extends StatelessWidget {
   final Widget? suffixIcon;
+  final Widget? preffixIcon;
   final String? hint, label;
   final String? Function(String?)? validator, onChanged, onAction;
   final List<TextInputFormatter>? formatter;
@@ -33,7 +34,8 @@ class ClenicFormTextField extends StatelessWidget {
       this.maxLine = 1,
       this.maxLength,
       this.obsecure = false,
-      this.formatter});
+      this.formatter,
+      this.preffixIcon});
 
   @override
   Widget build(BuildContext context) {
@@ -55,6 +57,18 @@ class ClenicFormTextField extends StatelessWidget {
       style: const TextStyle(color: Colors.black, fontSize: 12),
       decoration: InputDecoration(
         suffixIcon: suffixIcon,
+        prefixIcon: inputType == TextInputType.phone
+            ? const Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Text(
+                  "+62",
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              )
+            : null,
         floatingLabelBehavior: FloatingLabelBehavior.always,
         enabled: enabled ?? true,
         labelText: label,

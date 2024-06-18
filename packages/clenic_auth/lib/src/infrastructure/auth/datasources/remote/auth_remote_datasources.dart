@@ -1,13 +1,14 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:injectable/injectable.dart';
 import '../../../../domain/auth/firebase_auth_request.dart';
-import 'auth_remote_datasource.dart';
+import 'i_auth_remote_datasource.dart';
 
-@injectable
-@LazySingleton(as: AuthRemoteDataSources)
-class IAuthRemoteDataSources implements AuthRemoteDataSources {
+@LazySingleton(as: IAuthRemoteDataSources)
+class AuthRemoteDataSources implements IAuthRemoteDataSources {
   final FirebaseAuth _firebaseAuth;
-  IAuthRemoteDataSources({required FirebaseAuth firebaseAuth})
+  final GoogleAuthProvider _googleAuthProvider;
+  AuthRemoteDataSources(this._googleAuthProvider,
+      {required FirebaseAuth firebaseAuth})
       : _firebaseAuth = firebaseAuth;
   @override
   Future<UserCredential> getDataFromLoginFirebase(
@@ -29,5 +30,15 @@ class IAuthRemoteDataSources implements AuthRemoteDataSources {
   Future<void> createUserFirebase(FirebaseAuthRequest req) async {
     await _firebaseAuth.createUserWithEmailAndPassword(
         email: req.email!, password: req.password!);
+  }
+
+  @override
+  Future<void> signOut() async {
+    await _firebaseAuth.signOut();
+  }
+
+  @override
+  Future<void> signWithGoogle() async {
+    await _firebaseAuth.signInWithProvider(_googleAuthProvider);
   }
 }

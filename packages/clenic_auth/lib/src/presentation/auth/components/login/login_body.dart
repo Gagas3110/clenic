@@ -2,7 +2,6 @@
 
 import 'package:clenic_auth/src/domain/core/extension/clenic_auth_extension.dart';
 import 'package:clenic_auth/src/presentation/auth/components/login/login_form.dart';
-import 'package:clenic_ui/themes/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -15,7 +14,7 @@ class LoginBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: clenicWhite,
+      backgroundColor: Colors.grey.shade100,
       body: BlocListener<AuthBloc, AuthState>(
         listener: (context, state) {
           if (state is LoginSuccessF) {
@@ -25,14 +24,25 @@ class LoginBody extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => const HomePage()),
                 (Route<dynamic> route) => false);
           }
+          if (state is AuthSuccess) {
+            context.succesSnackBar('Login Success');
+
+            Navigator.of(context).pushAndRemoveUntil(
+                MaterialPageRoute(builder: (context) => const HomePage()),
+                (Route<dynamic> route) => false);
+          }
+          if (state is AuthFailure) {
+            print(state.error.toString());
+            context.failSnackbar(state.error.toString());
+          }
 
           if (state is LoginFailed) {
             print(state.failure.toString());
             context.failSnackbar(state.failure.toString());
           }
         },
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+        child: const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
           child: LoginForm(),
         ),
       ),

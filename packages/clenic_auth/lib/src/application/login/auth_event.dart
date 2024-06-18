@@ -9,5 +9,8 @@ abstract class AuthEvent with _$AuthEvent {
   const factory AuthEvent.checkLoginF() = CheckLoginF;
   const factory AuthEvent.checkObsecure(bool obs) = CheckObs;
   const factory AuthEvent.createAccountFirebase(FirebaseAuthRequest req) =
-      CreateAccountFirebase;   
+      CreateAccountFirebase;
+  const factory AuthEvent.checkCurrentTab(int selection) = CheckCurrentTab;
+  const factory AuthEvent.signInWithGoogle() = SignInWithGoogle;
+  const factory AuthEvent.signOut() = SignOut;
 }

@@ -5,24 +5,29 @@ import 'package:clenic_auth/src/domain/auth/firebase_auth_request.dart';
 import 'package:clenic_auth/src/domain/core/errors/exceptions.dart';
 import 'package:clenic_auth/src/domain/core/errors/failures.dart';
 import 'package:clenic_auth/src/domain/core/utils/auth_constant.dart';
-import 'package:clenic_auth/src/infrastructure/auth/datasources/local/auth/login_local_datasources.dart';
+import 'package:clenic_auth/src/infrastructure/auth/datasources/local/auth/i_login_local_datasources.dart';
+import 'package:clenic_auth/src/infrastructure/auth/datasources/remote/i_auth_remote_datasource.dart';
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
 
-import '../../../domain/auth/repositories/auth_repository.dart';
+import '../../../domain/auth/repositories/i_auth_repository.dart';
 import '../../../domain/core/network/network_info.dart';
 import '../datasources/remote/api/login_api.dart';
-import '../datasources/remote/i_auth_remote_datasources.dart';
 
-@LazySingleton(as: AuthRepository)
-class IAuthRepository implements AuthRepository {
+@LazySingleton(as: IAuthRepository)
+class AuthRepository implements IAuthRepository {
   final LoginApi _loginApi;
   final NetworkInfo _networkInfo;
-  final LoginLocalDataSource _loginLocalDataSource;
+  final ILoginLocalDataSource _loginLocalDataSource;
   final IAuthRemoteDataSources _authRemoteDataSource;
-  const IAuthRepository(this._loginApi, this._networkInfo,
-      this._loginLocalDataSource, this._authRemoteDataSource);
+  const AuthRepository(
+    this._loginApi,
+    this._networkInfo,
+    this._loginLocalDataSource,
+    this._authRemoteDataSource,
+  );
 
   @override
   Future<Either<Failure, LoginResponse>> getLoginResponse(
@@ -42,8 +47,8 @@ class IAuthRepository implements AuthRepository {
         ///because DTO extends from entity and then will be parsed automatically
         ///but, i'll be place the code commented below how to convert it manually (if u want do it manually)
 
-        ///final albumsConverted = albumsData.map((e) => e.toDomain()).toList();
-        ///return Right(albumsConverted);
+        ///final loginConverted = loginData.map((e) => e.toDomain()).toList();
+        ///return Right(loginConverted);
       } on ServerException {
         return const Left(Failure.serverFailure(serverFailureMessages));
       }
@@ -144,6 +149,24 @@ class IAuthRepository implements AuthRepository {
           "General Exception: ${e.toString()}",
         ),
       );
+    }
+  }
+
+  @override
+  Future<void> signInWithGoogle() async {
+    try {
+      await _authRemoteDataSource.signWithGoogle();
+    } catch (error) {
+      throw Exception('Google Sign-In failed');
+    }
+  }
+
+  @override
+  Future<void> signOut() async {
+    try {
+      await _authRemoteDataSource.signOut();
+    } catch (e) {
+      throw Exception('Google Sign-Out failed');
     }
   }
 }

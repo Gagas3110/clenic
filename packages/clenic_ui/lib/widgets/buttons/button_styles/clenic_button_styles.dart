@@ -23,7 +23,7 @@ class ClenicButtonStyle {
     this.showOutline = true,
   })  : disableBorderColor = disableBorderColor ?? Colors.grey.shade300,
         disableColor = disableColor ?? Colors.grey.shade300,
-        borderColor = const Color(0xff2D84FB);
+        borderColor = borderColor ?? const Color(0xff2D84FB);
 }
 
 class PrimaryClenicButtonStyle {

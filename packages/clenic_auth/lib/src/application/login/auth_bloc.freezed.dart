@@ -24,6 +24,9 @@ mixin _$AuthEvent {
     required TResult Function() checkLoginF,
     required TResult Function(bool obs) checkObsecure,
     required TResult Function(FirebaseAuthRequest req) createAccountFirebase,
+    required TResult Function(int selection) checkCurrentTab,
+    required TResult Function() signInWithGoogle,
+    required TResult Function() signOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,6 +37,9 @@ mixin _$AuthEvent {
     TResult? Function()? checkLoginF,
     TResult? Function(bool obs)? checkObsecure,
     TResult? Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult? Function(int selection)? checkCurrentTab,
+    TResult? Function()? signInWithGoogle,
+    TResult? Function()? signOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,6 +50,9 @@ mixin _$AuthEvent {
     TResult Function()? checkLoginF,
     TResult Function(bool obs)? checkObsecure,
     TResult Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult Function(int selection)? checkCurrentTab,
+    TResult Function()? signInWithGoogle,
+    TResult Function()? signOut,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -56,6 +65,9 @@ mixin _$AuthEvent {
     required TResult Function(CheckObs value) checkObsecure,
     required TResult Function(CreateAccountFirebase value)
         createAccountFirebase,
+    required TResult Function(CheckCurrentTab value) checkCurrentTab,
+    required TResult Function(SignInWithGoogle value) signInWithGoogle,
+    required TResult Function(SignOut value) signOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -66,6 +78,9 @@ mixin _$AuthEvent {
     TResult? Function(CheckLoginF value)? checkLoginF,
     TResult? Function(CheckObs value)? checkObsecure,
     TResult? Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult? Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult? Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult? Function(SignOut value)? signOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -76,6 +91,9 @@ mixin _$AuthEvent {
     TResult Function(CheckLoginF value)? checkLoginF,
     TResult Function(CheckObs value)? checkObsecure,
     TResult Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult Function(SignOut value)? signOut,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -169,6 +187,9 @@ class _$LoginSubmittedImpl implements LoginSubmitted {
     required TResult Function() checkLoginF,
     required TResult Function(bool obs) checkObsecure,
     required TResult Function(FirebaseAuthRequest req) createAccountFirebase,
+    required TResult Function(int selection) checkCurrentTab,
+    required TResult Function() signInWithGoogle,
+    required TResult Function() signOut,
   }) {
     return loginSubmitted(model);
   }
@@ -182,6 +203,9 @@ class _$LoginSubmittedImpl implements LoginSubmitted {
     TResult? Function()? checkLoginF,
     TResult? Function(bool obs)? checkObsecure,
     TResult? Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult? Function(int selection)? checkCurrentTab,
+    TResult? Function()? signInWithGoogle,
+    TResult? Function()? signOut,
   }) {
     return loginSubmitted?.call(model);
   }
@@ -195,6 +219,9 @@ class _$LoginSubmittedImpl implements LoginSubmitted {
     TResult Function()? checkLoginF,
     TResult Function(bool obs)? checkObsecure,
     TResult Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult Function(int selection)? checkCurrentTab,
+    TResult Function()? signInWithGoogle,
+    TResult Function()? signOut,
     required TResult orElse(),
   }) {
     if (loginSubmitted != null) {
@@ -213,6 +240,9 @@ class _$LoginSubmittedImpl implements LoginSubmitted {
     required TResult Function(CheckObs value) checkObsecure,
     required TResult Function(CreateAccountFirebase value)
         createAccountFirebase,
+    required TResult Function(CheckCurrentTab value) checkCurrentTab,
+    required TResult Function(SignInWithGoogle value) signInWithGoogle,
+    required TResult Function(SignOut value) signOut,
   }) {
     return loginSubmitted(this);
   }
@@ -226,6 +256,9 @@ class _$LoginSubmittedImpl implements LoginSubmitted {
     TResult? Function(CheckLoginF value)? checkLoginF,
     TResult? Function(CheckObs value)? checkObsecure,
     TResult? Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult? Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult? Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult? Function(SignOut value)? signOut,
   }) {
     return loginSubmitted?.call(this);
   }
@@ -239,6 +272,9 @@ class _$LoginSubmittedImpl implements LoginSubmitted {
     TResult Function(CheckLoginF value)? checkLoginF,
     TResult Function(CheckObs value)? checkObsecure,
     TResult Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult Function(SignOut value)? signOut,
     required TResult orElse(),
   }) {
     if (loginSubmitted != null) {
@@ -328,6 +364,9 @@ class _$LoginSubmittedFImpl implements LoginSubmittedF {
     required TResult Function() checkLoginF,
     required TResult Function(bool obs) checkObsecure,
     required TResult Function(FirebaseAuthRequest req) createAccountFirebase,
+    required TResult Function(int selection) checkCurrentTab,
+    required TResult Function() signInWithGoogle,
+    required TResult Function() signOut,
   }) {
     return loginSubmittedF(model);
   }
@@ -341,6 +380,9 @@ class _$LoginSubmittedFImpl implements LoginSubmittedF {
     TResult? Function()? checkLoginF,
     TResult? Function(bool obs)? checkObsecure,
     TResult? Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult? Function(int selection)? checkCurrentTab,
+    TResult? Function()? signInWithGoogle,
+    TResult? Function()? signOut,
   }) {
     return loginSubmittedF?.call(model);
   }
@@ -354,6 +396,9 @@ class _$LoginSubmittedFImpl implements LoginSubmittedF {
     TResult Function()? checkLoginF,
     TResult Function(bool obs)? checkObsecure,
     TResult Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult Function(int selection)? checkCurrentTab,
+    TResult Function()? signInWithGoogle,
+    TResult Function()? signOut,
     required TResult orElse(),
   }) {
     if (loginSubmittedF != null) {
@@ -372,6 +417,9 @@ class _$LoginSubmittedFImpl implements LoginSubmittedF {
     required TResult Function(CheckObs value) checkObsecure,
     required TResult Function(CreateAccountFirebase value)
         createAccountFirebase,
+    required TResult Function(CheckCurrentTab value) checkCurrentTab,
+    required TResult Function(SignInWithGoogle value) signInWithGoogle,
+    required TResult Function(SignOut value) signOut,
   }) {
     return loginSubmittedF(this);
   }
@@ -385,6 +433,9 @@ class _$LoginSubmittedFImpl implements LoginSubmittedF {
     TResult? Function(CheckLoginF value)? checkLoginF,
     TResult? Function(CheckObs value)? checkObsecure,
     TResult? Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult? Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult? Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult? Function(SignOut value)? signOut,
   }) {
     return loginSubmittedF?.call(this);
   }
@@ -398,6 +449,9 @@ class _$LoginSubmittedFImpl implements LoginSubmittedF {
     TResult Function(CheckLoginF value)? checkLoginF,
     TResult Function(CheckObs value)? checkObsecure,
     TResult Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult Function(SignOut value)? signOut,
     required TResult orElse(),
   }) {
     if (loginSubmittedF != null) {
@@ -461,6 +515,9 @@ class _$CheckLoginImpl implements CheckLogin {
     required TResult Function() checkLoginF,
     required TResult Function(bool obs) checkObsecure,
     required TResult Function(FirebaseAuthRequest req) createAccountFirebase,
+    required TResult Function(int selection) checkCurrentTab,
+    required TResult Function() signInWithGoogle,
+    required TResult Function() signOut,
   }) {
     return checkLogin();
   }
@@ -474,6 +531,9 @@ class _$CheckLoginImpl implements CheckLogin {
     TResult? Function()? checkLoginF,
     TResult? Function(bool obs)? checkObsecure,
     TResult? Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult? Function(int selection)? checkCurrentTab,
+    TResult? Function()? signInWithGoogle,
+    TResult? Function()? signOut,
   }) {
     return checkLogin?.call();
   }
@@ -487,6 +547,9 @@ class _$CheckLoginImpl implements CheckLogin {
     TResult Function()? checkLoginF,
     TResult Function(bool obs)? checkObsecure,
     TResult Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult Function(int selection)? checkCurrentTab,
+    TResult Function()? signInWithGoogle,
+    TResult Function()? signOut,
     required TResult orElse(),
   }) {
     if (checkLogin != null) {
@@ -505,6 +568,9 @@ class _$CheckLoginImpl implements CheckLogin {
     required TResult Function(CheckObs value) checkObsecure,
     required TResult Function(CreateAccountFirebase value)
         createAccountFirebase,
+    required TResult Function(CheckCurrentTab value) checkCurrentTab,
+    required TResult Function(SignInWithGoogle value) signInWithGoogle,
+    required TResult Function(SignOut value) signOut,
   }) {
     return checkLogin(this);
   }
@@ -518,6 +584,9 @@ class _$CheckLoginImpl implements CheckLogin {
     TResult? Function(CheckLoginF value)? checkLoginF,
     TResult? Function(CheckObs value)? checkObsecure,
     TResult? Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult? Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult? Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult? Function(SignOut value)? signOut,
   }) {
     return checkLogin?.call(this);
   }
@@ -531,6 +600,9 @@ class _$CheckLoginImpl implements CheckLogin {
     TResult Function(CheckLoginF value)? checkLoginF,
     TResult Function(CheckObs value)? checkObsecure,
     TResult Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult Function(SignOut value)? signOut,
     required TResult orElse(),
   }) {
     if (checkLogin != null) {
@@ -588,6 +660,9 @@ class _$CheckLoginFImpl implements CheckLoginF {
     required TResult Function() checkLoginF,
     required TResult Function(bool obs) checkObsecure,
     required TResult Function(FirebaseAuthRequest req) createAccountFirebase,
+    required TResult Function(int selection) checkCurrentTab,
+    required TResult Function() signInWithGoogle,
+    required TResult Function() signOut,
   }) {
     return checkLoginF();
   }
@@ -601,6 +676,9 @@ class _$CheckLoginFImpl implements CheckLoginF {
     TResult? Function()? checkLoginF,
     TResult? Function(bool obs)? checkObsecure,
     TResult? Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult? Function(int selection)? checkCurrentTab,
+    TResult? Function()? signInWithGoogle,
+    TResult? Function()? signOut,
   }) {
     return checkLoginF?.call();
   }
@@ -614,6 +692,9 @@ class _$CheckLoginFImpl implements CheckLoginF {
     TResult Function()? checkLoginF,
     TResult Function(bool obs)? checkObsecure,
     TResult Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult Function(int selection)? checkCurrentTab,
+    TResult Function()? signInWithGoogle,
+    TResult Function()? signOut,
     required TResult orElse(),
   }) {
     if (checkLoginF != null) {
@@ -632,6 +713,9 @@ class _$CheckLoginFImpl implements CheckLoginF {
     required TResult Function(CheckObs value) checkObsecure,
     required TResult Function(CreateAccountFirebase value)
         createAccountFirebase,
+    required TResult Function(CheckCurrentTab value) checkCurrentTab,
+    required TResult Function(SignInWithGoogle value) signInWithGoogle,
+    required TResult Function(SignOut value) signOut,
   }) {
     return checkLoginF(this);
   }
@@ -645,6 +729,9 @@ class _$CheckLoginFImpl implements CheckLoginF {
     TResult? Function(CheckLoginF value)? checkLoginF,
     TResult? Function(CheckObs value)? checkObsecure,
     TResult? Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult? Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult? Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult? Function(SignOut value)? signOut,
   }) {
     return checkLoginF?.call(this);
   }
@@ -658,6 +745,9 @@ class _$CheckLoginFImpl implements CheckLoginF {
     TResult Function(CheckLoginF value)? checkLoginF,
     TResult Function(CheckObs value)? checkObsecure,
     TResult Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult Function(SignOut value)? signOut,
     required TResult orElse(),
   }) {
     if (checkLoginF != null) {
@@ -741,6 +831,9 @@ class _$CheckObsImpl implements CheckObs {
     required TResult Function() checkLoginF,
     required TResult Function(bool obs) checkObsecure,
     required TResult Function(FirebaseAuthRequest req) createAccountFirebase,
+    required TResult Function(int selection) checkCurrentTab,
+    required TResult Function() signInWithGoogle,
+    required TResult Function() signOut,
   }) {
     return checkObsecure(obs);
   }
@@ -754,6 +847,9 @@ class _$CheckObsImpl implements CheckObs {
     TResult? Function()? checkLoginF,
     TResult? Function(bool obs)? checkObsecure,
     TResult? Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult? Function(int selection)? checkCurrentTab,
+    TResult? Function()? signInWithGoogle,
+    TResult? Function()? signOut,
   }) {
     return checkObsecure?.call(obs);
   }
@@ -767,6 +863,9 @@ class _$CheckObsImpl implements CheckObs {
     TResult Function()? checkLoginF,
     TResult Function(bool obs)? checkObsecure,
     TResult Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult Function(int selection)? checkCurrentTab,
+    TResult Function()? signInWithGoogle,
+    TResult Function()? signOut,
     required TResult orElse(),
   }) {
     if (checkObsecure != null) {
@@ -785,6 +884,9 @@ class _$CheckObsImpl implements CheckObs {
     required TResult Function(CheckObs value) checkObsecure,
     required TResult Function(CreateAccountFirebase value)
         createAccountFirebase,
+    required TResult Function(CheckCurrentTab value) checkCurrentTab,
+    required TResult Function(SignInWithGoogle value) signInWithGoogle,
+    required TResult Function(SignOut value) signOut,
   }) {
     return checkObsecure(this);
   }
@@ -798,6 +900,9 @@ class _$CheckObsImpl implements CheckObs {
     TResult? Function(CheckLoginF value)? checkLoginF,
     TResult? Function(CheckObs value)? checkObsecure,
     TResult? Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult? Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult? Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult? Function(SignOut value)? signOut,
   }) {
     return checkObsecure?.call(this);
   }
@@ -811,6 +916,9 @@ class _$CheckObsImpl implements CheckObs {
     TResult Function(CheckLoginF value)? checkLoginF,
     TResult Function(CheckObs value)? checkObsecure,
     TResult Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult Function(SignOut value)? signOut,
     required TResult orElse(),
   }) {
     if (checkObsecure != null) {
@@ -901,6 +1009,9 @@ class _$CreateAccountFirebaseImpl implements CreateAccountFirebase {
     required TResult Function() checkLoginF,
     required TResult Function(bool obs) checkObsecure,
     required TResult Function(FirebaseAuthRequest req) createAccountFirebase,
+    required TResult Function(int selection) checkCurrentTab,
+    required TResult Function() signInWithGoogle,
+    required TResult Function() signOut,
   }) {
     return createAccountFirebase(req);
   }
@@ -914,6 +1025,9 @@ class _$CreateAccountFirebaseImpl implements CreateAccountFirebase {
     TResult? Function()? checkLoginF,
     TResult? Function(bool obs)? checkObsecure,
     TResult? Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult? Function(int selection)? checkCurrentTab,
+    TResult? Function()? signInWithGoogle,
+    TResult? Function()? signOut,
   }) {
     return createAccountFirebase?.call(req);
   }
@@ -927,6 +1041,9 @@ class _$CreateAccountFirebaseImpl implements CreateAccountFirebase {
     TResult Function()? checkLoginF,
     TResult Function(bool obs)? checkObsecure,
     TResult Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult Function(int selection)? checkCurrentTab,
+    TResult Function()? signInWithGoogle,
+    TResult Function()? signOut,
     required TResult orElse(),
   }) {
     if (createAccountFirebase != null) {
@@ -945,6 +1062,9 @@ class _$CreateAccountFirebaseImpl implements CreateAccountFirebase {
     required TResult Function(CheckObs value) checkObsecure,
     required TResult Function(CreateAccountFirebase value)
         createAccountFirebase,
+    required TResult Function(CheckCurrentTab value) checkCurrentTab,
+    required TResult Function(SignInWithGoogle value) signInWithGoogle,
+    required TResult Function(SignOut value) signOut,
   }) {
     return createAccountFirebase(this);
   }
@@ -958,6 +1078,9 @@ class _$CreateAccountFirebaseImpl implements CreateAccountFirebase {
     TResult? Function(CheckLoginF value)? checkLoginF,
     TResult? Function(CheckObs value)? checkObsecure,
     TResult? Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult? Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult? Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult? Function(SignOut value)? signOut,
   }) {
     return createAccountFirebase?.call(this);
   }
@@ -971,6 +1094,9 @@ class _$CreateAccountFirebaseImpl implements CreateAccountFirebase {
     TResult Function(CheckLoginF value)? checkLoginF,
     TResult Function(CheckObs value)? checkObsecure,
     TResult Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult Function(SignOut value)? signOut,
     required TResult orElse(),
   }) {
     if (createAccountFirebase != null) {
@@ -991,6 +1117,474 @@ abstract class CreateAccountFirebase implements AuthEvent {
 }
 
 /// @nodoc
+abstract class _$$CheckCurrentTabImplCopyWith<$Res> {
+  factory _$$CheckCurrentTabImplCopyWith(_$CheckCurrentTabImpl value,
+          $Res Function(_$CheckCurrentTabImpl) then) =
+      __$$CheckCurrentTabImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int selection});
+}
+
+/// @nodoc
+class __$$CheckCurrentTabImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$CheckCurrentTabImpl>
+    implements _$$CheckCurrentTabImplCopyWith<$Res> {
+  __$$CheckCurrentTabImplCopyWithImpl(
+      _$CheckCurrentTabImpl _value, $Res Function(_$CheckCurrentTabImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? selection = null,
+  }) {
+    return _then(_$CheckCurrentTabImpl(
+      null == selection
+          ? _value.selection
+          : selection // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CheckCurrentTabImpl implements CheckCurrentTab {
+  const _$CheckCurrentTabImpl(this.selection);
+
+  @override
+  final int selection;
+
+  @override
+  String toString() {
+    return 'AuthEvent.checkCurrentTab(selection: $selection)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CheckCurrentTabImpl &&
+            (identical(other.selection, selection) ||
+                other.selection == selection));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, selection);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CheckCurrentTabImplCopyWith<_$CheckCurrentTabImpl> get copyWith =>
+      __$$CheckCurrentTabImplCopyWithImpl<_$CheckCurrentTabImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(LoginRequest model) loginSubmitted,
+    required TResult Function(FirebaseAuthRequest model) loginSubmittedF,
+    required TResult Function() checkLogin,
+    required TResult Function() checkLoginF,
+    required TResult Function(bool obs) checkObsecure,
+    required TResult Function(FirebaseAuthRequest req) createAccountFirebase,
+    required TResult Function(int selection) checkCurrentTab,
+    required TResult Function() signInWithGoogle,
+    required TResult Function() signOut,
+  }) {
+    return checkCurrentTab(selection);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(LoginRequest model)? loginSubmitted,
+    TResult? Function(FirebaseAuthRequest model)? loginSubmittedF,
+    TResult? Function()? checkLogin,
+    TResult? Function()? checkLoginF,
+    TResult? Function(bool obs)? checkObsecure,
+    TResult? Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult? Function(int selection)? checkCurrentTab,
+    TResult? Function()? signInWithGoogle,
+    TResult? Function()? signOut,
+  }) {
+    return checkCurrentTab?.call(selection);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(LoginRequest model)? loginSubmitted,
+    TResult Function(FirebaseAuthRequest model)? loginSubmittedF,
+    TResult Function()? checkLogin,
+    TResult Function()? checkLoginF,
+    TResult Function(bool obs)? checkObsecure,
+    TResult Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult Function(int selection)? checkCurrentTab,
+    TResult Function()? signInWithGoogle,
+    TResult Function()? signOut,
+    required TResult orElse(),
+  }) {
+    if (checkCurrentTab != null) {
+      return checkCurrentTab(selection);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(LoginSubmitted value) loginSubmitted,
+    required TResult Function(LoginSubmittedF value) loginSubmittedF,
+    required TResult Function(CheckLogin value) checkLogin,
+    required TResult Function(CheckLoginF value) checkLoginF,
+    required TResult Function(CheckObs value) checkObsecure,
+    required TResult Function(CreateAccountFirebase value)
+        createAccountFirebase,
+    required TResult Function(CheckCurrentTab value) checkCurrentTab,
+    required TResult Function(SignInWithGoogle value) signInWithGoogle,
+    required TResult Function(SignOut value) signOut,
+  }) {
+    return checkCurrentTab(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(LoginSubmitted value)? loginSubmitted,
+    TResult? Function(LoginSubmittedF value)? loginSubmittedF,
+    TResult? Function(CheckLogin value)? checkLogin,
+    TResult? Function(CheckLoginF value)? checkLoginF,
+    TResult? Function(CheckObs value)? checkObsecure,
+    TResult? Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult? Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult? Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult? Function(SignOut value)? signOut,
+  }) {
+    return checkCurrentTab?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(LoginSubmitted value)? loginSubmitted,
+    TResult Function(LoginSubmittedF value)? loginSubmittedF,
+    TResult Function(CheckLogin value)? checkLogin,
+    TResult Function(CheckLoginF value)? checkLoginF,
+    TResult Function(CheckObs value)? checkObsecure,
+    TResult Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult Function(SignOut value)? signOut,
+    required TResult orElse(),
+  }) {
+    if (checkCurrentTab != null) {
+      return checkCurrentTab(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CheckCurrentTab implements AuthEvent {
+  const factory CheckCurrentTab(final int selection) = _$CheckCurrentTabImpl;
+
+  int get selection;
+  @JsonKey(ignore: true)
+  _$$CheckCurrentTabImplCopyWith<_$CheckCurrentTabImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SignInWithGoogleImplCopyWith<$Res> {
+  factory _$$SignInWithGoogleImplCopyWith(_$SignInWithGoogleImpl value,
+          $Res Function(_$SignInWithGoogleImpl) then) =
+      __$$SignInWithGoogleImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SignInWithGoogleImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$SignInWithGoogleImpl>
+    implements _$$SignInWithGoogleImplCopyWith<$Res> {
+  __$$SignInWithGoogleImplCopyWithImpl(_$SignInWithGoogleImpl _value,
+      $Res Function(_$SignInWithGoogleImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SignInWithGoogleImpl implements SignInWithGoogle {
+  const _$SignInWithGoogleImpl();
+
+  @override
+  String toString() {
+    return 'AuthEvent.signInWithGoogle()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SignInWithGoogleImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(LoginRequest model) loginSubmitted,
+    required TResult Function(FirebaseAuthRequest model) loginSubmittedF,
+    required TResult Function() checkLogin,
+    required TResult Function() checkLoginF,
+    required TResult Function(bool obs) checkObsecure,
+    required TResult Function(FirebaseAuthRequest req) createAccountFirebase,
+    required TResult Function(int selection) checkCurrentTab,
+    required TResult Function() signInWithGoogle,
+    required TResult Function() signOut,
+  }) {
+    return signInWithGoogle();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(LoginRequest model)? loginSubmitted,
+    TResult? Function(FirebaseAuthRequest model)? loginSubmittedF,
+    TResult? Function()? checkLogin,
+    TResult? Function()? checkLoginF,
+    TResult? Function(bool obs)? checkObsecure,
+    TResult? Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult? Function(int selection)? checkCurrentTab,
+    TResult? Function()? signInWithGoogle,
+    TResult? Function()? signOut,
+  }) {
+    return signInWithGoogle?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(LoginRequest model)? loginSubmitted,
+    TResult Function(FirebaseAuthRequest model)? loginSubmittedF,
+    TResult Function()? checkLogin,
+    TResult Function()? checkLoginF,
+    TResult Function(bool obs)? checkObsecure,
+    TResult Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult Function(int selection)? checkCurrentTab,
+    TResult Function()? signInWithGoogle,
+    TResult Function()? signOut,
+    required TResult orElse(),
+  }) {
+    if (signInWithGoogle != null) {
+      return signInWithGoogle();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(LoginSubmitted value) loginSubmitted,
+    required TResult Function(LoginSubmittedF value) loginSubmittedF,
+    required TResult Function(CheckLogin value) checkLogin,
+    required TResult Function(CheckLoginF value) checkLoginF,
+    required TResult Function(CheckObs value) checkObsecure,
+    required TResult Function(CreateAccountFirebase value)
+        createAccountFirebase,
+    required TResult Function(CheckCurrentTab value) checkCurrentTab,
+    required TResult Function(SignInWithGoogle value) signInWithGoogle,
+    required TResult Function(SignOut value) signOut,
+  }) {
+    return signInWithGoogle(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(LoginSubmitted value)? loginSubmitted,
+    TResult? Function(LoginSubmittedF value)? loginSubmittedF,
+    TResult? Function(CheckLogin value)? checkLogin,
+    TResult? Function(CheckLoginF value)? checkLoginF,
+    TResult? Function(CheckObs value)? checkObsecure,
+    TResult? Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult? Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult? Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult? Function(SignOut value)? signOut,
+  }) {
+    return signInWithGoogle?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(LoginSubmitted value)? loginSubmitted,
+    TResult Function(LoginSubmittedF value)? loginSubmittedF,
+    TResult Function(CheckLogin value)? checkLogin,
+    TResult Function(CheckLoginF value)? checkLoginF,
+    TResult Function(CheckObs value)? checkObsecure,
+    TResult Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult Function(SignOut value)? signOut,
+    required TResult orElse(),
+  }) {
+    if (signInWithGoogle != null) {
+      return signInWithGoogle(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignInWithGoogle implements AuthEvent {
+  const factory SignInWithGoogle() = _$SignInWithGoogleImpl;
+}
+
+/// @nodoc
+abstract class _$$SignOutImplCopyWith<$Res> {
+  factory _$$SignOutImplCopyWith(
+          _$SignOutImpl value, $Res Function(_$SignOutImpl) then) =
+      __$$SignOutImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SignOutImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$SignOutImpl>
+    implements _$$SignOutImplCopyWith<$Res> {
+  __$$SignOutImplCopyWithImpl(
+      _$SignOutImpl _value, $Res Function(_$SignOutImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SignOutImpl implements SignOut {
+  const _$SignOutImpl();
+
+  @override
+  String toString() {
+    return 'AuthEvent.signOut()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SignOutImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(LoginRequest model) loginSubmitted,
+    required TResult Function(FirebaseAuthRequest model) loginSubmittedF,
+    required TResult Function() checkLogin,
+    required TResult Function() checkLoginF,
+    required TResult Function(bool obs) checkObsecure,
+    required TResult Function(FirebaseAuthRequest req) createAccountFirebase,
+    required TResult Function(int selection) checkCurrentTab,
+    required TResult Function() signInWithGoogle,
+    required TResult Function() signOut,
+  }) {
+    return signOut();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(LoginRequest model)? loginSubmitted,
+    TResult? Function(FirebaseAuthRequest model)? loginSubmittedF,
+    TResult? Function()? checkLogin,
+    TResult? Function()? checkLoginF,
+    TResult? Function(bool obs)? checkObsecure,
+    TResult? Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult? Function(int selection)? checkCurrentTab,
+    TResult? Function()? signInWithGoogle,
+    TResult? Function()? signOut,
+  }) {
+    return signOut?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(LoginRequest model)? loginSubmitted,
+    TResult Function(FirebaseAuthRequest model)? loginSubmittedF,
+    TResult Function()? checkLogin,
+    TResult Function()? checkLoginF,
+    TResult Function(bool obs)? checkObsecure,
+    TResult Function(FirebaseAuthRequest req)? createAccountFirebase,
+    TResult Function(int selection)? checkCurrentTab,
+    TResult Function()? signInWithGoogle,
+    TResult Function()? signOut,
+    required TResult orElse(),
+  }) {
+    if (signOut != null) {
+      return signOut();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(LoginSubmitted value) loginSubmitted,
+    required TResult Function(LoginSubmittedF value) loginSubmittedF,
+    required TResult Function(CheckLogin value) checkLogin,
+    required TResult Function(CheckLoginF value) checkLoginF,
+    required TResult Function(CheckObs value) checkObsecure,
+    required TResult Function(CreateAccountFirebase value)
+        createAccountFirebase,
+    required TResult Function(CheckCurrentTab value) checkCurrentTab,
+    required TResult Function(SignInWithGoogle value) signInWithGoogle,
+    required TResult Function(SignOut value) signOut,
+  }) {
+    return signOut(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(LoginSubmitted value)? loginSubmitted,
+    TResult? Function(LoginSubmittedF value)? loginSubmittedF,
+    TResult? Function(CheckLogin value)? checkLogin,
+    TResult? Function(CheckLoginF value)? checkLoginF,
+    TResult? Function(CheckObs value)? checkObsecure,
+    TResult? Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult? Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult? Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult? Function(SignOut value)? signOut,
+  }) {
+    return signOut?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(LoginSubmitted value)? loginSubmitted,
+    TResult Function(LoginSubmittedF value)? loginSubmittedF,
+    TResult Function(CheckLogin value)? checkLogin,
+    TResult Function(CheckLoginF value)? checkLoginF,
+    TResult Function(CheckObs value)? checkObsecure,
+    TResult Function(CreateAccountFirebase value)? createAccountFirebase,
+    TResult Function(CheckCurrentTab value)? checkCurrentTab,
+    TResult Function(SignInWithGoogle value)? signInWithGoogle,
+    TResult Function(SignOut value)? signOut,
+    required TResult orElse(),
+  }) {
+    if (signOut != null) {
+      return signOut(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignOut implements AuthEvent {
+  const factory SignOut() = _$SignOutImpl;
+}
+
+/// @nodoc
 mixin _$AuthState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -1005,6 +1599,10 @@ mixin _$AuthState {
     required TResult Function() createUserSuccess,
     required TResult Function() createUserLoading,
     required TResult Function(String message) createUserFailed,
+    required TResult Function(int selection) currentTab,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function(String error) failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1020,6 +1618,10 @@ mixin _$AuthState {
     TResult? Function()? createUserSuccess,
     TResult? Function()? createUserLoading,
     TResult? Function(String message)? createUserFailed,
+    TResult? Function(int selection)? currentTab,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function(String error)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1035,6 +1637,10 @@ mixin _$AuthState {
     TResult Function()? createUserSuccess,
     TResult Function()? createUserLoading,
     TResult Function(String message)? createUserFailed,
+    TResult Function(int selection)? currentTab,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function(String error)? failure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1051,6 +1657,10 @@ mixin _$AuthState {
     required TResult Function(CreateUserSuccess value) createUserSuccess,
     required TResult Function(CreateUserLoading value) createUserLoading,
     required TResult Function(CreateUserError value) createUserFailed,
+    required TResult Function(CurrentTab value) currentTab,
+    required TResult Function(AuthSuccess value) success,
+    required TResult Function(AuthLoading value) loading,
+    required TResult Function(AuthFailure value) failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1066,6 +1676,10 @@ mixin _$AuthState {
     TResult? Function(CreateUserSuccess value)? createUserSuccess,
     TResult? Function(CreateUserLoading value)? createUserLoading,
     TResult? Function(CreateUserError value)? createUserFailed,
+    TResult? Function(CurrentTab value)? currentTab,
+    TResult? Function(AuthSuccess value)? success,
+    TResult? Function(AuthLoading value)? loading,
+    TResult? Function(AuthFailure value)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1081,6 +1695,10 @@ mixin _$AuthState {
     TResult Function(CreateUserSuccess value)? createUserSuccess,
     TResult Function(CreateUserLoading value)? createUserLoading,
     TResult Function(CreateUserError value)? createUserFailed,
+    TResult Function(CurrentTab value)? currentTab,
+    TResult Function(AuthSuccess value)? success,
+    TResult Function(AuthLoading value)? loading,
+    TResult Function(AuthFailure value)? failure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1152,6 +1770,10 @@ class _$IsLoginStateImpl implements IsLoginState {
     required TResult Function() createUserSuccess,
     required TResult Function() createUserLoading,
     required TResult Function(String message) createUserFailed,
+    required TResult Function(int selection) currentTab,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function(String error) failure,
   }) {
     return isAuthState();
   }
@@ -1170,6 +1792,10 @@ class _$IsLoginStateImpl implements IsLoginState {
     TResult? Function()? createUserSuccess,
     TResult? Function()? createUserLoading,
     TResult? Function(String message)? createUserFailed,
+    TResult? Function(int selection)? currentTab,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function(String error)? failure,
   }) {
     return isAuthState?.call();
   }
@@ -1188,6 +1814,10 @@ class _$IsLoginStateImpl implements IsLoginState {
     TResult Function()? createUserSuccess,
     TResult Function()? createUserLoading,
     TResult Function(String message)? createUserFailed,
+    TResult Function(int selection)? currentTab,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function(String error)? failure,
     required TResult orElse(),
   }) {
     if (isAuthState != null) {
@@ -1210,6 +1840,10 @@ class _$IsLoginStateImpl implements IsLoginState {
     required TResult Function(CreateUserSuccess value) createUserSuccess,
     required TResult Function(CreateUserLoading value) createUserLoading,
     required TResult Function(CreateUserError value) createUserFailed,
+    required TResult Function(CurrentTab value) currentTab,
+    required TResult Function(AuthSuccess value) success,
+    required TResult Function(AuthLoading value) loading,
+    required TResult Function(AuthFailure value) failure,
   }) {
     return isAuthState(this);
   }
@@ -1228,6 +1862,10 @@ class _$IsLoginStateImpl implements IsLoginState {
     TResult? Function(CreateUserSuccess value)? createUserSuccess,
     TResult? Function(CreateUserLoading value)? createUserLoading,
     TResult? Function(CreateUserError value)? createUserFailed,
+    TResult? Function(CurrentTab value)? currentTab,
+    TResult? Function(AuthSuccess value)? success,
+    TResult? Function(AuthLoading value)? loading,
+    TResult? Function(AuthFailure value)? failure,
   }) {
     return isAuthState?.call(this);
   }
@@ -1246,6 +1884,10 @@ class _$IsLoginStateImpl implements IsLoginState {
     TResult Function(CreateUserSuccess value)? createUserSuccess,
     TResult Function(CreateUserLoading value)? createUserLoading,
     TResult Function(CreateUserError value)? createUserFailed,
+    TResult Function(CurrentTab value)? currentTab,
+    TResult Function(AuthSuccess value)? success,
+    TResult Function(AuthLoading value)? loading,
+    TResult Function(AuthFailure value)? failure,
     required TResult orElse(),
   }) {
     if (isAuthState != null) {
@@ -1308,6 +1950,10 @@ class _$NotLoginStateImpl implements NotLoginState {
     required TResult Function() createUserSuccess,
     required TResult Function() createUserLoading,
     required TResult Function(String message) createUserFailed,
+    required TResult Function(int selection) currentTab,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function(String error) failure,
   }) {
     return notLoginState();
   }
@@ -1326,6 +1972,10 @@ class _$NotLoginStateImpl implements NotLoginState {
     TResult? Function()? createUserSuccess,
     TResult? Function()? createUserLoading,
     TResult? Function(String message)? createUserFailed,
+    TResult? Function(int selection)? currentTab,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function(String error)? failure,
   }) {
     return notLoginState?.call();
   }
@@ -1344,6 +1994,10 @@ class _$NotLoginStateImpl implements NotLoginState {
     TResult Function()? createUserSuccess,
     TResult Function()? createUserLoading,
     TResult Function(String message)? createUserFailed,
+    TResult Function(int selection)? currentTab,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function(String error)? failure,
     required TResult orElse(),
   }) {
     if (notLoginState != null) {
@@ -1366,6 +2020,10 @@ class _$NotLoginStateImpl implements NotLoginState {
     required TResult Function(CreateUserSuccess value) createUserSuccess,
     required TResult Function(CreateUserLoading value) createUserLoading,
     required TResult Function(CreateUserError value) createUserFailed,
+    required TResult Function(CurrentTab value) currentTab,
+    required TResult Function(AuthSuccess value) success,
+    required TResult Function(AuthLoading value) loading,
+    required TResult Function(AuthFailure value) failure,
   }) {
     return notLoginState(this);
   }
@@ -1384,6 +2042,10 @@ class _$NotLoginStateImpl implements NotLoginState {
     TResult? Function(CreateUserSuccess value)? createUserSuccess,
     TResult? Function(CreateUserLoading value)? createUserLoading,
     TResult? Function(CreateUserError value)? createUserFailed,
+    TResult? Function(CurrentTab value)? currentTab,
+    TResult? Function(AuthSuccess value)? success,
+    TResult? Function(AuthLoading value)? loading,
+    TResult? Function(AuthFailure value)? failure,
   }) {
     return notLoginState?.call(this);
   }
@@ -1402,6 +2064,10 @@ class _$NotLoginStateImpl implements NotLoginState {
     TResult Function(CreateUserSuccess value)? createUserSuccess,
     TResult Function(CreateUserLoading value)? createUserLoading,
     TResult Function(CreateUserError value)? createUserFailed,
+    TResult Function(CurrentTab value)? currentTab,
+    TResult Function(AuthSuccess value)? success,
+    TResult Function(AuthLoading value)? loading,
+    TResult Function(AuthFailure value)? failure,
     required TResult orElse(),
   }) {
     if (notLoginState != null) {
@@ -1464,6 +2130,10 @@ class _$InitStateImpl implements InitState {
     required TResult Function() createUserSuccess,
     required TResult Function() createUserLoading,
     required TResult Function(String message) createUserFailed,
+    required TResult Function(int selection) currentTab,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function(String error) failure,
   }) {
     return initState();
   }
@@ -1482,6 +2152,10 @@ class _$InitStateImpl implements InitState {
     TResult? Function()? createUserSuccess,
     TResult? Function()? createUserLoading,
     TResult? Function(String message)? createUserFailed,
+    TResult? Function(int selection)? currentTab,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function(String error)? failure,
   }) {
     return initState?.call();
   }
@@ -1500,6 +2174,10 @@ class _$InitStateImpl implements InitState {
     TResult Function()? createUserSuccess,
     TResult Function()? createUserLoading,
     TResult Function(String message)? createUserFailed,
+    TResult Function(int selection)? currentTab,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function(String error)? failure,
     required TResult orElse(),
   }) {
     if (initState != null) {
@@ -1522,6 +2200,10 @@ class _$InitStateImpl implements InitState {
     required TResult Function(CreateUserSuccess value) createUserSuccess,
     required TResult Function(CreateUserLoading value) createUserLoading,
     required TResult Function(CreateUserError value) createUserFailed,
+    required TResult Function(CurrentTab value) currentTab,
+    required TResult Function(AuthSuccess value) success,
+    required TResult Function(AuthLoading value) loading,
+    required TResult Function(AuthFailure value) failure,
   }) {
     return initState(this);
   }
@@ -1540,6 +2222,10 @@ class _$InitStateImpl implements InitState {
     TResult? Function(CreateUserSuccess value)? createUserSuccess,
     TResult? Function(CreateUserLoading value)? createUserLoading,
     TResult? Function(CreateUserError value)? createUserFailed,
+    TResult? Function(CurrentTab value)? currentTab,
+    TResult? Function(AuthSuccess value)? success,
+    TResult? Function(AuthLoading value)? loading,
+    TResult? Function(AuthFailure value)? failure,
   }) {
     return initState?.call(this);
   }
@@ -1558,6 +2244,10 @@ class _$InitStateImpl implements InitState {
     TResult Function(CreateUserSuccess value)? createUserSuccess,
     TResult Function(CreateUserLoading value)? createUserLoading,
     TResult Function(CreateUserError value)? createUserFailed,
+    TResult Function(CurrentTab value)? currentTab,
+    TResult Function(AuthSuccess value)? success,
+    TResult Function(AuthLoading value)? loading,
+    TResult Function(AuthFailure value)? failure,
     required TResult orElse(),
   }) {
     if (initState != null) {
@@ -1620,6 +2310,10 @@ class _$LoginProgressImpl implements LoginProgress {
     required TResult Function() createUserSuccess,
     required TResult Function() createUserLoading,
     required TResult Function(String message) createUserFailed,
+    required TResult Function(int selection) currentTab,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function(String error) failure,
   }) {
     return loginInProgress();
   }
@@ -1638,6 +2332,10 @@ class _$LoginProgressImpl implements LoginProgress {
     TResult? Function()? createUserSuccess,
     TResult? Function()? createUserLoading,
     TResult? Function(String message)? createUserFailed,
+    TResult? Function(int selection)? currentTab,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function(String error)? failure,
   }) {
     return loginInProgress?.call();
   }
@@ -1656,6 +2354,10 @@ class _$LoginProgressImpl implements LoginProgress {
     TResult Function()? createUserSuccess,
     TResult Function()? createUserLoading,
     TResult Function(String message)? createUserFailed,
+    TResult Function(int selection)? currentTab,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function(String error)? failure,
     required TResult orElse(),
   }) {
     if (loginInProgress != null) {
@@ -1678,6 +2380,10 @@ class _$LoginProgressImpl implements LoginProgress {
     required TResult Function(CreateUserSuccess value) createUserSuccess,
     required TResult Function(CreateUserLoading value) createUserLoading,
     required TResult Function(CreateUserError value) createUserFailed,
+    required TResult Function(CurrentTab value) currentTab,
+    required TResult Function(AuthSuccess value) success,
+    required TResult Function(AuthLoading value) loading,
+    required TResult Function(AuthFailure value) failure,
   }) {
     return loginInProgress(this);
   }
@@ -1696,6 +2402,10 @@ class _$LoginProgressImpl implements LoginProgress {
     TResult? Function(CreateUserSuccess value)? createUserSuccess,
     TResult? Function(CreateUserLoading value)? createUserLoading,
     TResult? Function(CreateUserError value)? createUserFailed,
+    TResult? Function(CurrentTab value)? currentTab,
+    TResult? Function(AuthSuccess value)? success,
+    TResult? Function(AuthLoading value)? loading,
+    TResult? Function(AuthFailure value)? failure,
   }) {
     return loginInProgress?.call(this);
   }
@@ -1714,6 +2424,10 @@ class _$LoginProgressImpl implements LoginProgress {
     TResult Function(CreateUserSuccess value)? createUserSuccess,
     TResult Function(CreateUserLoading value)? createUserLoading,
     TResult Function(CreateUserError value)? createUserFailed,
+    TResult Function(CurrentTab value)? currentTab,
+    TResult Function(AuthSuccess value)? success,
+    TResult Function(AuthLoading value)? loading,
+    TResult Function(AuthFailure value)? failure,
     required TResult orElse(),
   }) {
     if (loginInProgress != null) {
@@ -1803,6 +2517,10 @@ class _$LoginSuccessImpl implements LoginSuccess {
     required TResult Function() createUserSuccess,
     required TResult Function() createUserLoading,
     required TResult Function(String message) createUserFailed,
+    required TResult Function(int selection) currentTab,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function(String error) failure,
   }) {
     return loginSuccess(response);
   }
@@ -1821,6 +2539,10 @@ class _$LoginSuccessImpl implements LoginSuccess {
     TResult? Function()? createUserSuccess,
     TResult? Function()? createUserLoading,
     TResult? Function(String message)? createUserFailed,
+    TResult? Function(int selection)? currentTab,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function(String error)? failure,
   }) {
     return loginSuccess?.call(response);
   }
@@ -1839,6 +2561,10 @@ class _$LoginSuccessImpl implements LoginSuccess {
     TResult Function()? createUserSuccess,
     TResult Function()? createUserLoading,
     TResult Function(String message)? createUserFailed,
+    TResult Function(int selection)? currentTab,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function(String error)? failure,
     required TResult orElse(),
   }) {
     if (loginSuccess != null) {
@@ -1861,6 +2587,10 @@ class _$LoginSuccessImpl implements LoginSuccess {
     required TResult Function(CreateUserSuccess value) createUserSuccess,
     required TResult Function(CreateUserLoading value) createUserLoading,
     required TResult Function(CreateUserError value) createUserFailed,
+    required TResult Function(CurrentTab value) currentTab,
+    required TResult Function(AuthSuccess value) success,
+    required TResult Function(AuthLoading value) loading,
+    required TResult Function(AuthFailure value) failure,
   }) {
     return loginSuccess(this);
   }
@@ -1879,6 +2609,10 @@ class _$LoginSuccessImpl implements LoginSuccess {
     TResult? Function(CreateUserSuccess value)? createUserSuccess,
     TResult? Function(CreateUserLoading value)? createUserLoading,
     TResult? Function(CreateUserError value)? createUserFailed,
+    TResult? Function(CurrentTab value)? currentTab,
+    TResult? Function(AuthSuccess value)? success,
+    TResult? Function(AuthLoading value)? loading,
+    TResult? Function(AuthFailure value)? failure,
   }) {
     return loginSuccess?.call(this);
   }
@@ -1897,6 +2631,10 @@ class _$LoginSuccessImpl implements LoginSuccess {
     TResult Function(CreateUserSuccess value)? createUserSuccess,
     TResult Function(CreateUserLoading value)? createUserLoading,
     TResult Function(CreateUserError value)? createUserFailed,
+    TResult Function(CurrentTab value)? currentTab,
+    TResult Function(AuthSuccess value)? success,
+    TResult Function(AuthLoading value)? loading,
+    TResult Function(AuthFailure value)? failure,
     required TResult orElse(),
   }) {
     if (loginSuccess != null) {
@@ -1991,6 +2729,10 @@ class _$LoginSuccessFImpl implements LoginSuccessF {
     required TResult Function() createUserSuccess,
     required TResult Function() createUserLoading,
     required TResult Function(String message) createUserFailed,
+    required TResult Function(int selection) currentTab,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function(String error) failure,
   }) {
     return loginSuccessF(userToken);
   }
@@ -2009,6 +2751,10 @@ class _$LoginSuccessFImpl implements LoginSuccessF {
     TResult? Function()? createUserSuccess,
     TResult? Function()? createUserLoading,
     TResult? Function(String message)? createUserFailed,
+    TResult? Function(int selection)? currentTab,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function(String error)? failure,
   }) {
     return loginSuccessF?.call(userToken);
   }
@@ -2027,6 +2773,10 @@ class _$LoginSuccessFImpl implements LoginSuccessF {
     TResult Function()? createUserSuccess,
     TResult Function()? createUserLoading,
     TResult Function(String message)? createUserFailed,
+    TResult Function(int selection)? currentTab,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function(String error)? failure,
     required TResult orElse(),
   }) {
     if (loginSuccessF != null) {
@@ -2049,6 +2799,10 @@ class _$LoginSuccessFImpl implements LoginSuccessF {
     required TResult Function(CreateUserSuccess value) createUserSuccess,
     required TResult Function(CreateUserLoading value) createUserLoading,
     required TResult Function(CreateUserError value) createUserFailed,
+    required TResult Function(CurrentTab value) currentTab,
+    required TResult Function(AuthSuccess value) success,
+    required TResult Function(AuthLoading value) loading,
+    required TResult Function(AuthFailure value) failure,
   }) {
     return loginSuccessF(this);
   }
@@ -2067,6 +2821,10 @@ class _$LoginSuccessFImpl implements LoginSuccessF {
     TResult? Function(CreateUserSuccess value)? createUserSuccess,
     TResult? Function(CreateUserLoading value)? createUserLoading,
     TResult? Function(CreateUserError value)? createUserFailed,
+    TResult? Function(CurrentTab value)? currentTab,
+    TResult? Function(AuthSuccess value)? success,
+    TResult? Function(AuthLoading value)? loading,
+    TResult? Function(AuthFailure value)? failure,
   }) {
     return loginSuccessF?.call(this);
   }
@@ -2085,6 +2843,10 @@ class _$LoginSuccessFImpl implements LoginSuccessF {
     TResult Function(CreateUserSuccess value)? createUserSuccess,
     TResult Function(CreateUserLoading value)? createUserLoading,
     TResult Function(CreateUserError value)? createUserFailed,
+    TResult Function(CurrentTab value)? currentTab,
+    TResult Function(AuthSuccess value)? success,
+    TResult Function(AuthLoading value)? loading,
+    TResult Function(AuthFailure value)? failure,
     required TResult orElse(),
   }) {
     if (loginSuccessF != null) {
@@ -2179,6 +2941,10 @@ class _$GetObsecureBoolImpl implements GetObsecureBool {
     required TResult Function() createUserSuccess,
     required TResult Function() createUserLoading,
     required TResult Function(String message) createUserFailed,
+    required TResult Function(int selection) currentTab,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function(String error) failure,
   }) {
     return obsecureText(obs);
   }
@@ -2197,6 +2963,10 @@ class _$GetObsecureBoolImpl implements GetObsecureBool {
     TResult? Function()? createUserSuccess,
     TResult? Function()? createUserLoading,
     TResult? Function(String message)? createUserFailed,
+    TResult? Function(int selection)? currentTab,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function(String error)? failure,
   }) {
     return obsecureText?.call(obs);
   }
@@ -2215,6 +2985,10 @@ class _$GetObsecureBoolImpl implements GetObsecureBool {
     TResult Function()? createUserSuccess,
     TResult Function()? createUserLoading,
     TResult Function(String message)? createUserFailed,
+    TResult Function(int selection)? currentTab,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function(String error)? failure,
     required TResult orElse(),
   }) {
     if (obsecureText != null) {
@@ -2237,6 +3011,10 @@ class _$GetObsecureBoolImpl implements GetObsecureBool {
     required TResult Function(CreateUserSuccess value) createUserSuccess,
     required TResult Function(CreateUserLoading value) createUserLoading,
     required TResult Function(CreateUserError value) createUserFailed,
+    required TResult Function(CurrentTab value) currentTab,
+    required TResult Function(AuthSuccess value) success,
+    required TResult Function(AuthLoading value) loading,
+    required TResult Function(AuthFailure value) failure,
   }) {
     return obsecureText(this);
   }
@@ -2255,6 +3033,10 @@ class _$GetObsecureBoolImpl implements GetObsecureBool {
     TResult? Function(CreateUserSuccess value)? createUserSuccess,
     TResult? Function(CreateUserLoading value)? createUserLoading,
     TResult? Function(CreateUserError value)? createUserFailed,
+    TResult? Function(CurrentTab value)? currentTab,
+    TResult? Function(AuthSuccess value)? success,
+    TResult? Function(AuthLoading value)? loading,
+    TResult? Function(AuthFailure value)? failure,
   }) {
     return obsecureText?.call(this);
   }
@@ -2273,6 +3055,10 @@ class _$GetObsecureBoolImpl implements GetObsecureBool {
     TResult Function(CreateUserSuccess value)? createUserSuccess,
     TResult Function(CreateUserLoading value)? createUserLoading,
     TResult Function(CreateUserError value)? createUserFailed,
+    TResult Function(CurrentTab value)? currentTab,
+    TResult Function(AuthSuccess value)? success,
+    TResult Function(AuthLoading value)? loading,
+    TResult Function(AuthFailure value)? failure,
     required TResult orElse(),
   }) {
     if (obsecureText != null) {
@@ -2380,8 +3166,12 @@ class _$LoginFailedImpl implements LoginFailed {
     required TResult Function() createUserSuccess,
     required TResult Function() createUserLoading,
     required TResult Function(String message) createUserFailed,
+    required TResult Function(int selection) currentTab,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function(String error) failure,
   }) {
-    return loginFailed(failure);
+    return loginFailed(this.failure);
   }
 
   @override
@@ -2398,8 +3188,12 @@ class _$LoginFailedImpl implements LoginFailed {
     TResult? Function()? createUserSuccess,
     TResult? Function()? createUserLoading,
     TResult? Function(String message)? createUserFailed,
+    TResult? Function(int selection)? currentTab,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function(String error)? failure,
   }) {
-    return loginFailed?.call(failure);
+    return loginFailed?.call(this.failure);
   }
 
   @override
@@ -2416,10 +3210,14 @@ class _$LoginFailedImpl implements LoginFailed {
     TResult Function()? createUserSuccess,
     TResult Function()? createUserLoading,
     TResult Function(String message)? createUserFailed,
+    TResult Function(int selection)? currentTab,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function(String error)? failure,
     required TResult orElse(),
   }) {
     if (loginFailed != null) {
-      return loginFailed(failure);
+      return loginFailed(this.failure);
     }
     return orElse();
   }
@@ -2438,6 +3236,10 @@ class _$LoginFailedImpl implements LoginFailed {
     required TResult Function(CreateUserSuccess value) createUserSuccess,
     required TResult Function(CreateUserLoading value) createUserLoading,
     required TResult Function(CreateUserError value) createUserFailed,
+    required TResult Function(CurrentTab value) currentTab,
+    required TResult Function(AuthSuccess value) success,
+    required TResult Function(AuthLoading value) loading,
+    required TResult Function(AuthFailure value) failure,
   }) {
     return loginFailed(this);
   }
@@ -2456,6 +3258,10 @@ class _$LoginFailedImpl implements LoginFailed {
     TResult? Function(CreateUserSuccess value)? createUserSuccess,
     TResult? Function(CreateUserLoading value)? createUserLoading,
     TResult? Function(CreateUserError value)? createUserFailed,
+    TResult? Function(CurrentTab value)? currentTab,
+    TResult? Function(AuthSuccess value)? success,
+    TResult? Function(AuthLoading value)? loading,
+    TResult? Function(AuthFailure value)? failure,
   }) {
     return loginFailed?.call(this);
   }
@@ -2474,6 +3280,10 @@ class _$LoginFailedImpl implements LoginFailed {
     TResult Function(CreateUserSuccess value)? createUserSuccess,
     TResult Function(CreateUserLoading value)? createUserLoading,
     TResult Function(CreateUserError value)? createUserFailed,
+    TResult Function(CurrentTab value)? currentTab,
+    TResult Function(AuthSuccess value)? success,
+    TResult Function(AuthLoading value)? loading,
+    TResult Function(AuthFailure value)? failure,
     required TResult orElse(),
   }) {
     if (loginFailed != null) {
@@ -2541,6 +3351,10 @@ class _$CreateUserSuccessImpl implements CreateUserSuccess {
     required TResult Function() createUserSuccess,
     required TResult Function() createUserLoading,
     required TResult Function(String message) createUserFailed,
+    required TResult Function(int selection) currentTab,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function(String error) failure,
   }) {
     return createUserSuccess();
   }
@@ -2559,6 +3373,10 @@ class _$CreateUserSuccessImpl implements CreateUserSuccess {
     TResult? Function()? createUserSuccess,
     TResult? Function()? createUserLoading,
     TResult? Function(String message)? createUserFailed,
+    TResult? Function(int selection)? currentTab,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function(String error)? failure,
   }) {
     return createUserSuccess?.call();
   }
@@ -2577,6 +3395,10 @@ class _$CreateUserSuccessImpl implements CreateUserSuccess {
     TResult Function()? createUserSuccess,
     TResult Function()? createUserLoading,
     TResult Function(String message)? createUserFailed,
+    TResult Function(int selection)? currentTab,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function(String error)? failure,
     required TResult orElse(),
   }) {
     if (createUserSuccess != null) {
@@ -2599,6 +3421,10 @@ class _$CreateUserSuccessImpl implements CreateUserSuccess {
     required TResult Function(CreateUserSuccess value) createUserSuccess,
     required TResult Function(CreateUserLoading value) createUserLoading,
     required TResult Function(CreateUserError value) createUserFailed,
+    required TResult Function(CurrentTab value) currentTab,
+    required TResult Function(AuthSuccess value) success,
+    required TResult Function(AuthLoading value) loading,
+    required TResult Function(AuthFailure value) failure,
   }) {
     return createUserSuccess(this);
   }
@@ -2617,6 +3443,10 @@ class _$CreateUserSuccessImpl implements CreateUserSuccess {
     TResult? Function(CreateUserSuccess value)? createUserSuccess,
     TResult? Function(CreateUserLoading value)? createUserLoading,
     TResult? Function(CreateUserError value)? createUserFailed,
+    TResult? Function(CurrentTab value)? currentTab,
+    TResult? Function(AuthSuccess value)? success,
+    TResult? Function(AuthLoading value)? loading,
+    TResult? Function(AuthFailure value)? failure,
   }) {
     return createUserSuccess?.call(this);
   }
@@ -2635,6 +3465,10 @@ class _$CreateUserSuccessImpl implements CreateUserSuccess {
     TResult Function(CreateUserSuccess value)? createUserSuccess,
     TResult Function(CreateUserLoading value)? createUserLoading,
     TResult Function(CreateUserError value)? createUserFailed,
+    TResult Function(CurrentTab value)? currentTab,
+    TResult Function(AuthSuccess value)? success,
+    TResult Function(AuthLoading value)? loading,
+    TResult Function(AuthFailure value)? failure,
     required TResult orElse(),
   }) {
     if (createUserSuccess != null) {
@@ -2697,6 +3531,10 @@ class _$CreateUserLoadingImpl implements CreateUserLoading {
     required TResult Function() createUserSuccess,
     required TResult Function() createUserLoading,
     required TResult Function(String message) createUserFailed,
+    required TResult Function(int selection) currentTab,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function(String error) failure,
   }) {
     return createUserLoading();
   }
@@ -2715,6 +3553,10 @@ class _$CreateUserLoadingImpl implements CreateUserLoading {
     TResult? Function()? createUserSuccess,
     TResult? Function()? createUserLoading,
     TResult? Function(String message)? createUserFailed,
+    TResult? Function(int selection)? currentTab,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function(String error)? failure,
   }) {
     return createUserLoading?.call();
   }
@@ -2733,6 +3575,10 @@ class _$CreateUserLoadingImpl implements CreateUserLoading {
     TResult Function()? createUserSuccess,
     TResult Function()? createUserLoading,
     TResult Function(String message)? createUserFailed,
+    TResult Function(int selection)? currentTab,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function(String error)? failure,
     required TResult orElse(),
   }) {
     if (createUserLoading != null) {
@@ -2755,6 +3601,10 @@ class _$CreateUserLoadingImpl implements CreateUserLoading {
     required TResult Function(CreateUserSuccess value) createUserSuccess,
     required TResult Function(CreateUserLoading value) createUserLoading,
     required TResult Function(CreateUserError value) createUserFailed,
+    required TResult Function(CurrentTab value) currentTab,
+    required TResult Function(AuthSuccess value) success,
+    required TResult Function(AuthLoading value) loading,
+    required TResult Function(AuthFailure value) failure,
   }) {
     return createUserLoading(this);
   }
@@ -2773,6 +3623,10 @@ class _$CreateUserLoadingImpl implements CreateUserLoading {
     TResult? Function(CreateUserSuccess value)? createUserSuccess,
     TResult? Function(CreateUserLoading value)? createUserLoading,
     TResult? Function(CreateUserError value)? createUserFailed,
+    TResult? Function(CurrentTab value)? currentTab,
+    TResult? Function(AuthSuccess value)? success,
+    TResult? Function(AuthLoading value)? loading,
+    TResult? Function(AuthFailure value)? failure,
   }) {
     return createUserLoading?.call(this);
   }
@@ -2791,6 +3645,10 @@ class _$CreateUserLoadingImpl implements CreateUserLoading {
     TResult Function(CreateUserSuccess value)? createUserSuccess,
     TResult Function(CreateUserLoading value)? createUserLoading,
     TResult Function(CreateUserError value)? createUserFailed,
+    TResult Function(CurrentTab value)? currentTab,
+    TResult Function(AuthSuccess value)? success,
+    TResult Function(AuthLoading value)? loading,
+    TResult Function(AuthFailure value)? failure,
     required TResult orElse(),
   }) {
     if (createUserLoading != null) {
@@ -2880,6 +3738,10 @@ class _$CreateUserErrorImpl implements CreateUserError {
     required TResult Function() createUserSuccess,
     required TResult Function() createUserLoading,
     required TResult Function(String message) createUserFailed,
+    required TResult Function(int selection) currentTab,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function(String error) failure,
   }) {
     return createUserFailed(message);
   }
@@ -2898,6 +3760,10 @@ class _$CreateUserErrorImpl implements CreateUserError {
     TResult? Function()? createUserSuccess,
     TResult? Function()? createUserLoading,
     TResult? Function(String message)? createUserFailed,
+    TResult? Function(int selection)? currentTab,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function(String error)? failure,
   }) {
     return createUserFailed?.call(message);
   }
@@ -2916,6 +3782,10 @@ class _$CreateUserErrorImpl implements CreateUserError {
     TResult Function()? createUserSuccess,
     TResult Function()? createUserLoading,
     TResult Function(String message)? createUserFailed,
+    TResult Function(int selection)? currentTab,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function(String error)? failure,
     required TResult orElse(),
   }) {
     if (createUserFailed != null) {
@@ -2938,6 +3808,10 @@ class _$CreateUserErrorImpl implements CreateUserError {
     required TResult Function(CreateUserSuccess value) createUserSuccess,
     required TResult Function(CreateUserLoading value) createUserLoading,
     required TResult Function(CreateUserError value) createUserFailed,
+    required TResult Function(CurrentTab value) currentTab,
+    required TResult Function(AuthSuccess value) success,
+    required TResult Function(AuthLoading value) loading,
+    required TResult Function(AuthFailure value) failure,
   }) {
     return createUserFailed(this);
   }
@@ -2956,6 +3830,10 @@ class _$CreateUserErrorImpl implements CreateUserError {
     TResult? Function(CreateUserSuccess value)? createUserSuccess,
     TResult? Function(CreateUserLoading value)? createUserLoading,
     TResult? Function(CreateUserError value)? createUserFailed,
+    TResult? Function(CurrentTab value)? currentTab,
+    TResult? Function(AuthSuccess value)? success,
+    TResult? Function(AuthLoading value)? loading,
+    TResult? Function(AuthFailure value)? failure,
   }) {
     return createUserFailed?.call(this);
   }
@@ -2974,6 +3852,10 @@ class _$CreateUserErrorImpl implements CreateUserError {
     TResult Function(CreateUserSuccess value)? createUserSuccess,
     TResult Function(CreateUserLoading value)? createUserLoading,
     TResult Function(CreateUserError value)? createUserFailed,
+    TResult Function(CurrentTab value)? currentTab,
+    TResult Function(AuthSuccess value)? success,
+    TResult Function(AuthLoading value)? loading,
+    TResult Function(AuthFailure value)? failure,
     required TResult orElse(),
   }) {
     if (createUserFailed != null) {
@@ -2989,5 +3871,788 @@ abstract class CreateUserError implements AuthState {
   String get message;
   @JsonKey(ignore: true)
   _$$CreateUserErrorImplCopyWith<_$CreateUserErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CurrentTabImplCopyWith<$Res> {
+  factory _$$CurrentTabImplCopyWith(
+          _$CurrentTabImpl value, $Res Function(_$CurrentTabImpl) then) =
+      __$$CurrentTabImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int selection});
+}
+
+/// @nodoc
+class __$$CurrentTabImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$CurrentTabImpl>
+    implements _$$CurrentTabImplCopyWith<$Res> {
+  __$$CurrentTabImplCopyWithImpl(
+      _$CurrentTabImpl _value, $Res Function(_$CurrentTabImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? selection = null,
+  }) {
+    return _then(_$CurrentTabImpl(
+      null == selection
+          ? _value.selection
+          : selection // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CurrentTabImpl implements CurrentTab {
+  const _$CurrentTabImpl(this.selection);
+
+  @override
+  final int selection;
+
+  @override
+  String toString() {
+    return 'AuthState.currentTab(selection: $selection)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CurrentTabImpl &&
+            (identical(other.selection, selection) ||
+                other.selection == selection));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, selection);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CurrentTabImplCopyWith<_$CurrentTabImpl> get copyWith =>
+      __$$CurrentTabImplCopyWithImpl<_$CurrentTabImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() isAuthState,
+    required TResult Function() notLoginState,
+    required TResult Function() initState,
+    required TResult Function() loginInProgress,
+    required TResult Function(LoginResponse response) loginSuccess,
+    required TResult Function(String userToken) loginSuccessF,
+    required TResult Function(bool obs) obsecureText,
+    required TResult Function(Failure? failure) loginFailed,
+    required TResult Function() createUserSuccess,
+    required TResult Function() createUserLoading,
+    required TResult Function(String message) createUserFailed,
+    required TResult Function(int selection) currentTab,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function(String error) failure,
+  }) {
+    return currentTab(selection);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? isAuthState,
+    TResult? Function()? notLoginState,
+    TResult? Function()? initState,
+    TResult? Function()? loginInProgress,
+    TResult? Function(LoginResponse response)? loginSuccess,
+    TResult? Function(String userToken)? loginSuccessF,
+    TResult? Function(bool obs)? obsecureText,
+    TResult? Function(Failure? failure)? loginFailed,
+    TResult? Function()? createUserSuccess,
+    TResult? Function()? createUserLoading,
+    TResult? Function(String message)? createUserFailed,
+    TResult? Function(int selection)? currentTab,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function(String error)? failure,
+  }) {
+    return currentTab?.call(selection);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? isAuthState,
+    TResult Function()? notLoginState,
+    TResult Function()? initState,
+    TResult Function()? loginInProgress,
+    TResult Function(LoginResponse response)? loginSuccess,
+    TResult Function(String userToken)? loginSuccessF,
+    TResult Function(bool obs)? obsecureText,
+    TResult Function(Failure? failure)? loginFailed,
+    TResult Function()? createUserSuccess,
+    TResult Function()? createUserLoading,
+    TResult Function(String message)? createUserFailed,
+    TResult Function(int selection)? currentTab,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function(String error)? failure,
+    required TResult orElse(),
+  }) {
+    if (currentTab != null) {
+      return currentTab(selection);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(IsLoginState value) isAuthState,
+    required TResult Function(NotLoginState value) notLoginState,
+    required TResult Function(InitState value) initState,
+    required TResult Function(LoginProgress value) loginInProgress,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(LoginSuccessF value) loginSuccessF,
+    required TResult Function(GetObsecureBool value) obsecureText,
+    required TResult Function(LoginFailed value) loginFailed,
+    required TResult Function(CreateUserSuccess value) createUserSuccess,
+    required TResult Function(CreateUserLoading value) createUserLoading,
+    required TResult Function(CreateUserError value) createUserFailed,
+    required TResult Function(CurrentTab value) currentTab,
+    required TResult Function(AuthSuccess value) success,
+    required TResult Function(AuthLoading value) loading,
+    required TResult Function(AuthFailure value) failure,
+  }) {
+    return currentTab(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(IsLoginState value)? isAuthState,
+    TResult? Function(NotLoginState value)? notLoginState,
+    TResult? Function(InitState value)? initState,
+    TResult? Function(LoginProgress value)? loginInProgress,
+    TResult? Function(LoginSuccess value)? loginSuccess,
+    TResult? Function(LoginSuccessF value)? loginSuccessF,
+    TResult? Function(GetObsecureBool value)? obsecureText,
+    TResult? Function(LoginFailed value)? loginFailed,
+    TResult? Function(CreateUserSuccess value)? createUserSuccess,
+    TResult? Function(CreateUserLoading value)? createUserLoading,
+    TResult? Function(CreateUserError value)? createUserFailed,
+    TResult? Function(CurrentTab value)? currentTab,
+    TResult? Function(AuthSuccess value)? success,
+    TResult? Function(AuthLoading value)? loading,
+    TResult? Function(AuthFailure value)? failure,
+  }) {
+    return currentTab?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(IsLoginState value)? isAuthState,
+    TResult Function(NotLoginState value)? notLoginState,
+    TResult Function(InitState value)? initState,
+    TResult Function(LoginProgress value)? loginInProgress,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(LoginSuccessF value)? loginSuccessF,
+    TResult Function(GetObsecureBool value)? obsecureText,
+    TResult Function(LoginFailed value)? loginFailed,
+    TResult Function(CreateUserSuccess value)? createUserSuccess,
+    TResult Function(CreateUserLoading value)? createUserLoading,
+    TResult Function(CreateUserError value)? createUserFailed,
+    TResult Function(CurrentTab value)? currentTab,
+    TResult Function(AuthSuccess value)? success,
+    TResult Function(AuthLoading value)? loading,
+    TResult Function(AuthFailure value)? failure,
+    required TResult orElse(),
+  }) {
+    if (currentTab != null) {
+      return currentTab(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CurrentTab implements AuthState {
+  const factory CurrentTab(final int selection) = _$CurrentTabImpl;
+
+  int get selection;
+  @JsonKey(ignore: true)
+  _$$CurrentTabImplCopyWith<_$CurrentTabImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AuthSuccessImplCopyWith<$Res> {
+  factory _$$AuthSuccessImplCopyWith(
+          _$AuthSuccessImpl value, $Res Function(_$AuthSuccessImpl) then) =
+      __$$AuthSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AuthSuccessImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$AuthSuccessImpl>
+    implements _$$AuthSuccessImplCopyWith<$Res> {
+  __$$AuthSuccessImplCopyWithImpl(
+      _$AuthSuccessImpl _value, $Res Function(_$AuthSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$AuthSuccessImpl implements AuthSuccess {
+  const _$AuthSuccessImpl();
+
+  @override
+  String toString() {
+    return 'AuthState.success()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AuthSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() isAuthState,
+    required TResult Function() notLoginState,
+    required TResult Function() initState,
+    required TResult Function() loginInProgress,
+    required TResult Function(LoginResponse response) loginSuccess,
+    required TResult Function(String userToken) loginSuccessF,
+    required TResult Function(bool obs) obsecureText,
+    required TResult Function(Failure? failure) loginFailed,
+    required TResult Function() createUserSuccess,
+    required TResult Function() createUserLoading,
+    required TResult Function(String message) createUserFailed,
+    required TResult Function(int selection) currentTab,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function(String error) failure,
+  }) {
+    return success();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? isAuthState,
+    TResult? Function()? notLoginState,
+    TResult? Function()? initState,
+    TResult? Function()? loginInProgress,
+    TResult? Function(LoginResponse response)? loginSuccess,
+    TResult? Function(String userToken)? loginSuccessF,
+    TResult? Function(bool obs)? obsecureText,
+    TResult? Function(Failure? failure)? loginFailed,
+    TResult? Function()? createUserSuccess,
+    TResult? Function()? createUserLoading,
+    TResult? Function(String message)? createUserFailed,
+    TResult? Function(int selection)? currentTab,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function(String error)? failure,
+  }) {
+    return success?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? isAuthState,
+    TResult Function()? notLoginState,
+    TResult Function()? initState,
+    TResult Function()? loginInProgress,
+    TResult Function(LoginResponse response)? loginSuccess,
+    TResult Function(String userToken)? loginSuccessF,
+    TResult Function(bool obs)? obsecureText,
+    TResult Function(Failure? failure)? loginFailed,
+    TResult Function()? createUserSuccess,
+    TResult Function()? createUserLoading,
+    TResult Function(String message)? createUserFailed,
+    TResult Function(int selection)? currentTab,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function(String error)? failure,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(IsLoginState value) isAuthState,
+    required TResult Function(NotLoginState value) notLoginState,
+    required TResult Function(InitState value) initState,
+    required TResult Function(LoginProgress value) loginInProgress,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(LoginSuccessF value) loginSuccessF,
+    required TResult Function(GetObsecureBool value) obsecureText,
+    required TResult Function(LoginFailed value) loginFailed,
+    required TResult Function(CreateUserSuccess value) createUserSuccess,
+    required TResult Function(CreateUserLoading value) createUserLoading,
+    required TResult Function(CreateUserError value) createUserFailed,
+    required TResult Function(CurrentTab value) currentTab,
+    required TResult Function(AuthSuccess value) success,
+    required TResult Function(AuthLoading value) loading,
+    required TResult Function(AuthFailure value) failure,
+  }) {
+    return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(IsLoginState value)? isAuthState,
+    TResult? Function(NotLoginState value)? notLoginState,
+    TResult? Function(InitState value)? initState,
+    TResult? Function(LoginProgress value)? loginInProgress,
+    TResult? Function(LoginSuccess value)? loginSuccess,
+    TResult? Function(LoginSuccessF value)? loginSuccessF,
+    TResult? Function(GetObsecureBool value)? obsecureText,
+    TResult? Function(LoginFailed value)? loginFailed,
+    TResult? Function(CreateUserSuccess value)? createUserSuccess,
+    TResult? Function(CreateUserLoading value)? createUserLoading,
+    TResult? Function(CreateUserError value)? createUserFailed,
+    TResult? Function(CurrentTab value)? currentTab,
+    TResult? Function(AuthSuccess value)? success,
+    TResult? Function(AuthLoading value)? loading,
+    TResult? Function(AuthFailure value)? failure,
+  }) {
+    return success?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(IsLoginState value)? isAuthState,
+    TResult Function(NotLoginState value)? notLoginState,
+    TResult Function(InitState value)? initState,
+    TResult Function(LoginProgress value)? loginInProgress,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(LoginSuccessF value)? loginSuccessF,
+    TResult Function(GetObsecureBool value)? obsecureText,
+    TResult Function(LoginFailed value)? loginFailed,
+    TResult Function(CreateUserSuccess value)? createUserSuccess,
+    TResult Function(CreateUserLoading value)? createUserLoading,
+    TResult Function(CreateUserError value)? createUserFailed,
+    TResult Function(CurrentTab value)? currentTab,
+    TResult Function(AuthSuccess value)? success,
+    TResult Function(AuthLoading value)? loading,
+    TResult Function(AuthFailure value)? failure,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AuthSuccess implements AuthState {
+  const factory AuthSuccess() = _$AuthSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$AuthLoadingImplCopyWith<$Res> {
+  factory _$$AuthLoadingImplCopyWith(
+          _$AuthLoadingImpl value, $Res Function(_$AuthLoadingImpl) then) =
+      __$$AuthLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AuthLoadingImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$AuthLoadingImpl>
+    implements _$$AuthLoadingImplCopyWith<$Res> {
+  __$$AuthLoadingImplCopyWithImpl(
+      _$AuthLoadingImpl _value, $Res Function(_$AuthLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$AuthLoadingImpl implements AuthLoading {
+  const _$AuthLoadingImpl();
+
+  @override
+  String toString() {
+    return 'AuthState.loading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AuthLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() isAuthState,
+    required TResult Function() notLoginState,
+    required TResult Function() initState,
+    required TResult Function() loginInProgress,
+    required TResult Function(LoginResponse response) loginSuccess,
+    required TResult Function(String userToken) loginSuccessF,
+    required TResult Function(bool obs) obsecureText,
+    required TResult Function(Failure? failure) loginFailed,
+    required TResult Function() createUserSuccess,
+    required TResult Function() createUserLoading,
+    required TResult Function(String message) createUserFailed,
+    required TResult Function(int selection) currentTab,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function(String error) failure,
+  }) {
+    return loading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? isAuthState,
+    TResult? Function()? notLoginState,
+    TResult? Function()? initState,
+    TResult? Function()? loginInProgress,
+    TResult? Function(LoginResponse response)? loginSuccess,
+    TResult? Function(String userToken)? loginSuccessF,
+    TResult? Function(bool obs)? obsecureText,
+    TResult? Function(Failure? failure)? loginFailed,
+    TResult? Function()? createUserSuccess,
+    TResult? Function()? createUserLoading,
+    TResult? Function(String message)? createUserFailed,
+    TResult? Function(int selection)? currentTab,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function(String error)? failure,
+  }) {
+    return loading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? isAuthState,
+    TResult Function()? notLoginState,
+    TResult Function()? initState,
+    TResult Function()? loginInProgress,
+    TResult Function(LoginResponse response)? loginSuccess,
+    TResult Function(String userToken)? loginSuccessF,
+    TResult Function(bool obs)? obsecureText,
+    TResult Function(Failure? failure)? loginFailed,
+    TResult Function()? createUserSuccess,
+    TResult Function()? createUserLoading,
+    TResult Function(String message)? createUserFailed,
+    TResult Function(int selection)? currentTab,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function(String error)? failure,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(IsLoginState value) isAuthState,
+    required TResult Function(NotLoginState value) notLoginState,
+    required TResult Function(InitState value) initState,
+    required TResult Function(LoginProgress value) loginInProgress,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(LoginSuccessF value) loginSuccessF,
+    required TResult Function(GetObsecureBool value) obsecureText,
+    required TResult Function(LoginFailed value) loginFailed,
+    required TResult Function(CreateUserSuccess value) createUserSuccess,
+    required TResult Function(CreateUserLoading value) createUserLoading,
+    required TResult Function(CreateUserError value) createUserFailed,
+    required TResult Function(CurrentTab value) currentTab,
+    required TResult Function(AuthSuccess value) success,
+    required TResult Function(AuthLoading value) loading,
+    required TResult Function(AuthFailure value) failure,
+  }) {
+    return loading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(IsLoginState value)? isAuthState,
+    TResult? Function(NotLoginState value)? notLoginState,
+    TResult? Function(InitState value)? initState,
+    TResult? Function(LoginProgress value)? loginInProgress,
+    TResult? Function(LoginSuccess value)? loginSuccess,
+    TResult? Function(LoginSuccessF value)? loginSuccessF,
+    TResult? Function(GetObsecureBool value)? obsecureText,
+    TResult? Function(LoginFailed value)? loginFailed,
+    TResult? Function(CreateUserSuccess value)? createUserSuccess,
+    TResult? Function(CreateUserLoading value)? createUserLoading,
+    TResult? Function(CreateUserError value)? createUserFailed,
+    TResult? Function(CurrentTab value)? currentTab,
+    TResult? Function(AuthSuccess value)? success,
+    TResult? Function(AuthLoading value)? loading,
+    TResult? Function(AuthFailure value)? failure,
+  }) {
+    return loading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(IsLoginState value)? isAuthState,
+    TResult Function(NotLoginState value)? notLoginState,
+    TResult Function(InitState value)? initState,
+    TResult Function(LoginProgress value)? loginInProgress,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(LoginSuccessF value)? loginSuccessF,
+    TResult Function(GetObsecureBool value)? obsecureText,
+    TResult Function(LoginFailed value)? loginFailed,
+    TResult Function(CreateUserSuccess value)? createUserSuccess,
+    TResult Function(CreateUserLoading value)? createUserLoading,
+    TResult Function(CreateUserError value)? createUserFailed,
+    TResult Function(CurrentTab value)? currentTab,
+    TResult Function(AuthSuccess value)? success,
+    TResult Function(AuthLoading value)? loading,
+    TResult Function(AuthFailure value)? failure,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AuthLoading implements AuthState {
+  const factory AuthLoading() = _$AuthLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$AuthFailureImplCopyWith<$Res> {
+  factory _$$AuthFailureImplCopyWith(
+          _$AuthFailureImpl value, $Res Function(_$AuthFailureImpl) then) =
+      __$$AuthFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String error});
+}
+
+/// @nodoc
+class __$$AuthFailureImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$AuthFailureImpl>
+    implements _$$AuthFailureImplCopyWith<$Res> {
+  __$$AuthFailureImplCopyWithImpl(
+      _$AuthFailureImpl _value, $Res Function(_$AuthFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$AuthFailureImpl(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AuthFailureImpl implements AuthFailure {
+  const _$AuthFailureImpl(this.error);
+
+  @override
+  final String error;
+
+  @override
+  String toString() {
+    return 'AuthState.failure(error: $error)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AuthFailureImpl &&
+            (identical(other.error, error) || other.error == error));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, error);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AuthFailureImplCopyWith<_$AuthFailureImpl> get copyWith =>
+      __$$AuthFailureImplCopyWithImpl<_$AuthFailureImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() isAuthState,
+    required TResult Function() notLoginState,
+    required TResult Function() initState,
+    required TResult Function() loginInProgress,
+    required TResult Function(LoginResponse response) loginSuccess,
+    required TResult Function(String userToken) loginSuccessF,
+    required TResult Function(bool obs) obsecureText,
+    required TResult Function(Failure? failure) loginFailed,
+    required TResult Function() createUserSuccess,
+    required TResult Function() createUserLoading,
+    required TResult Function(String message) createUserFailed,
+    required TResult Function(int selection) currentTab,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function(String error) failure,
+  }) {
+    return failure(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? isAuthState,
+    TResult? Function()? notLoginState,
+    TResult? Function()? initState,
+    TResult? Function()? loginInProgress,
+    TResult? Function(LoginResponse response)? loginSuccess,
+    TResult? Function(String userToken)? loginSuccessF,
+    TResult? Function(bool obs)? obsecureText,
+    TResult? Function(Failure? failure)? loginFailed,
+    TResult? Function()? createUserSuccess,
+    TResult? Function()? createUserLoading,
+    TResult? Function(String message)? createUserFailed,
+    TResult? Function(int selection)? currentTab,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function(String error)? failure,
+  }) {
+    return failure?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? isAuthState,
+    TResult Function()? notLoginState,
+    TResult Function()? initState,
+    TResult Function()? loginInProgress,
+    TResult Function(LoginResponse response)? loginSuccess,
+    TResult Function(String userToken)? loginSuccessF,
+    TResult Function(bool obs)? obsecureText,
+    TResult Function(Failure? failure)? loginFailed,
+    TResult Function()? createUserSuccess,
+    TResult Function()? createUserLoading,
+    TResult Function(String message)? createUserFailed,
+    TResult Function(int selection)? currentTab,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function(String error)? failure,
+    required TResult orElse(),
+  }) {
+    if (failure != null) {
+      return failure(error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(IsLoginState value) isAuthState,
+    required TResult Function(NotLoginState value) notLoginState,
+    required TResult Function(InitState value) initState,
+    required TResult Function(LoginProgress value) loginInProgress,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(LoginSuccessF value) loginSuccessF,
+    required TResult Function(GetObsecureBool value) obsecureText,
+    required TResult Function(LoginFailed value) loginFailed,
+    required TResult Function(CreateUserSuccess value) createUserSuccess,
+    required TResult Function(CreateUserLoading value) createUserLoading,
+    required TResult Function(CreateUserError value) createUserFailed,
+    required TResult Function(CurrentTab value) currentTab,
+    required TResult Function(AuthSuccess value) success,
+    required TResult Function(AuthLoading value) loading,
+    required TResult Function(AuthFailure value) failure,
+  }) {
+    return failure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(IsLoginState value)? isAuthState,
+    TResult? Function(NotLoginState value)? notLoginState,
+    TResult? Function(InitState value)? initState,
+    TResult? Function(LoginProgress value)? loginInProgress,
+    TResult? Function(LoginSuccess value)? loginSuccess,
+    TResult? Function(LoginSuccessF value)? loginSuccessF,
+    TResult? Function(GetObsecureBool value)? obsecureText,
+    TResult? Function(LoginFailed value)? loginFailed,
+    TResult? Function(CreateUserSuccess value)? createUserSuccess,
+    TResult? Function(CreateUserLoading value)? createUserLoading,
+    TResult? Function(CreateUserError value)? createUserFailed,
+    TResult? Function(CurrentTab value)? currentTab,
+    TResult? Function(AuthSuccess value)? success,
+    TResult? Function(AuthLoading value)? loading,
+    TResult? Function(AuthFailure value)? failure,
+  }) {
+    return failure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(IsLoginState value)? isAuthState,
+    TResult Function(NotLoginState value)? notLoginState,
+    TResult Function(InitState value)? initState,
+    TResult Function(LoginProgress value)? loginInProgress,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(LoginSuccessF value)? loginSuccessF,
+    TResult Function(GetObsecureBool value)? obsecureText,
+    TResult Function(LoginFailed value)? loginFailed,
+    TResult Function(CreateUserSuccess value)? createUserSuccess,
+    TResult Function(CreateUserLoading value)? createUserLoading,
+    TResult Function(CreateUserError value)? createUserFailed,
+    TResult Function(CurrentTab value)? currentTab,
+    TResult Function(AuthSuccess value)? success,
+    TResult Function(AuthLoading value)? loading,
+    TResult Function(AuthFailure value)? failure,
+    required TResult orElse(),
+  }) {
+    if (failure != null) {
+      return failure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AuthFailure implements AuthState {
+  const factory AuthFailure(final String error) = _$AuthFailureImpl;
+
+  String get error;
+  @JsonKey(ignore: true)
+  _$$AuthFailureImplCopyWith<_$AuthFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

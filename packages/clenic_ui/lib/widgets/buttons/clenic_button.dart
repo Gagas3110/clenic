@@ -75,12 +75,16 @@ class ClenicButton extends StatelessWidget {
                         child: Row(
                           children: [
                             if (isVisibleLoad)
-                              SizedBox(
-                                width: 20,
-                                height: 20,
-                                child: context.circularprogress(),
+                              Row(
+                                children: [
+                                  SizedBox(
+                                    width: 20,
+                                    height: 20,
+                                    child: context.circularprogress(),
+                                  ),
+                                  const SizedBox(width: 20),
+                                ],
                               ),
-                            const SizedBox(width: 20),
                             Text(
                               title,
                               style: Theme.of(context)

@@ -13,4 +13,8 @@ abstract class AuthState with _$AuthState {
   const factory AuthState.createUserSuccess() = CreateUserSuccess;
   const factory AuthState.createUserLoading() = CreateUserLoading;
   const factory AuthState.createUserFailed(String message) = CreateUserError;
+  const factory AuthState.currentTab(int selection) = CurrentTab;
+  const factory AuthState.success() = AuthSuccess;
+  const factory AuthState.loading() = AuthLoading;
+  const factory AuthState.failure(String error) = AuthFailure;
 }

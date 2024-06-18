@@ -6,7 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import '../entities/login_request.dart';
 import '../firebase_auth_request.dart';
 
-abstract class AuthRepository {
+abstract class IAuthRepository {
   ///interfaces which holds contracts pf what the "login" do
   ///
   ///
@@ -22,4 +22,6 @@ abstract class AuthRepository {
   User currentUser();
   Stream<User?> authStateChanges();
   Future<Either<Failure, void>> createUserFirebase(FirebaseAuthRequest req);
+  Future<void> signInWithGoogle();
+  Future<void> signOut();
 }

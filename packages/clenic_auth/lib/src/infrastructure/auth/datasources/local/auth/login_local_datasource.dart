@@ -6,12 +6,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../../domain/core/errors/exceptions.dart';
 import '../../../../../domain/core/utils/auth_constant.dart';
 import '../../../dto/auth/login_dto.dart';
-import 'login_local_datasources.dart';
+import 'i_login_local_datasources.dart';
 
-@LazySingleton(as: LoginLocalDataSource)
-class ILoginLocalDataSource implements LoginLocalDataSource {
+@LazySingleton(as: ILoginLocalDataSource)
+class LoginLocalDataSource implements ILoginLocalDataSource {
   final SharedPreferences _sharedPreferences;
-  const ILoginLocalDataSource(this._sharedPreferences);
+  const LoginLocalDataSource(this._sharedPreferences);
   @override
   Future<void> cacheLoginInLocalStorage(LoginDto loginDto) async {
     final resp = loginDto.toJson();

@@ -7,7 +7,8 @@ import '../../../../application/login/auth_bloc.dart';
 import '../../screen/login/login_screen.dart';
 
 class SignupBody extends StatelessWidget {
-  const SignupBody({super.key});
+  final int selection;
+  const SignupBody({super.key, required this.selection});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,9 @@ class SignupBody extends StatelessWidget {
         },
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-          child: SignupForm(),
+          child: SignupForm(
+            selection: selection,
+          ),
         ),
       ),
     );

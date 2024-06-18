@@ -7,7 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import '../../domain/auth/entities/login_request.dart';
-import '../../domain/auth/repositories/auth_repository.dart';
+import '../../domain/auth/repositories/i_auth_repository.dart';
 
 part 'auth_bloc.freezed.dart';
 part 'auth_event.dart';
@@ -15,7 +15,7 @@ part 'auth_state.dart';
 
 @injectable
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
-  final AuthRepository _authRepo;
+  final IAuthRepository _authRepo;
 
   AuthBloc(this._authRepo) : super(const AuthState.initState()) {
     on<CheckLogin>(_checkLogin);
@@ -24,6 +24,9 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     on<CheckLoginF>(_checkLoginFirebase);
     on<LoginSubmittedF>(_loginSubmittedFirebase);
     on<CreateAccountFirebase>(_createAccountFirebase);
+    on<CheckCurrentTab>(_checkCurrentTab);
+    on<SignInWithGoogle>(_onSignInWithGoogle);
+    on<SignOut>(_onSignOut);
   }
 
   /// Handles checking if the login is valid
@@ -117,5 +120,35 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         (_) => emit(const CreateUserSuccess()),
       );
     }
+  }
+
+  FutureOr<void> _checkCurrentTab(AuthEvent event, Emitter<AuthState> emit) {
+    try {
+      if (event is CheckCurrentTab) {
+        final selection = event.selection;
+        emit(CurrentTab(selection));
+      } else {
+        emit(const CurrentTab(0));
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  Future<void> _onSignInWithGoogle(
+      SignInWithGoogle event, Emitter<AuthState> emit) async {
+    emit(const AuthLoading());
+    try {
+      await _authRepo.signInWithGoogle();
+      emit(const AuthSuccess());
+    } catch (e) {
+      emit(AuthFailure(e.toString()));
+    }
+  }
+
+  Future<void> _onSignOut(SignOut event, Emitter<AuthState> emit) async {
+    emit(const AuthLoading());
+    await _authRepo.signOut();
+    emit(const AuthSuccess());
   }
 }

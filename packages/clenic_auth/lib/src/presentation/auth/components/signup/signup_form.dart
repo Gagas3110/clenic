@@ -1,22 +1,27 @@
 import 'package:clenic_auth/src/domain/auth/firebase_auth_request.dart';
 import 'package:clenic_ui/clenic_ui.dart';
+import 'package:clenic_ui/themes/constant.dart';
 import 'package:clenic_ui/widgets/buttons/button_styles/clenic_button_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../../../application/login/auth_bloc.dart';
 import '../../screen/login/login_screen.dart';
 
 class SignupForm extends StatelessWidget {
+  final int selection;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  final TextEditingController _nameController = TextEditingController();
+  //final TextEditingController _nameController = TextEditingController();
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _phoneController = TextEditingController();
 
-  SignupForm({super.key});
+  SignupForm({super.key, required this.selection});
 
   @override
   Widget build(BuildContext context) {
+    const assetName = 'assets/signup.svg';
     return Form(
       key: _formKey,
       child: Column(
@@ -29,50 +34,52 @@ class SignupForm extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset('assets/image/booking_logo.png',
-                    width: 40, height: 40),
-                const SizedBox(height: 10),
                 const Text(
-                  'Sign Up Form',
+                  'Register',
                   style: TextStyle(fontSize: 30),
                 ),
+                const Text(
+                  'Buat Akun Baru',
+                  style: TextStyle(fontSize: 16),
+                ),
+                SvgPicture.asset(assetName),
               ],
             ),
           ),
-          const SizedBox(height: 10),
-          const Text(
-            'Hola New User',
-            style: TextStyle(fontSize: 16),
-          ),
-          const SizedBox(height: 60),
-          ClenicFormTextField(
-              hint: 'Name',
-              controller: _nameController,
-              maxLength: 30,
-              inputType: TextInputType.emailAddress,
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return "Please enter your Name";
-                }
-                return null;
-              }),
           const SizedBox(height: 20),
-          ClenicFormTextField(
-              hint: 'Email',
-              controller: _usernameController,
-              maxLength: 30,
-              inputType: TextInputType.emailAddress,
-              validator: (value) {
-                String regExpString =
-                    r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
-                RegExp regExp = RegExp(regExpString);
-                if (!regExp.hasMatch(value!)) {
-                  return 'Please enter your email';
-                } else if (value.isEmpty) {
-                  return "Please enter username";
-                }
-                return null;
-              }),
+          selection == 0
+              ? ClenicFormTextField(
+                  hint: 'Email',
+                  controller: _usernameController,
+                  maxLength: 30,
+                  inputType: TextInputType.emailAddress,
+                  validator: (value) {
+                    String regExpString =
+                        r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
+                    RegExp regExp = RegExp(regExpString);
+                    if (!regExp.hasMatch(value!)) {
+                      return 'Please enter your email';
+                    } else if (value.isEmpty) {
+                      return "Please enter username";
+                    }
+                    return null;
+                  })
+              : ClenicFormTextField(
+                  hint: 'No.Hp',
+                  controller: _phoneController,
+                  maxLength: 30,
+                  inputType: TextInputType.phone,
+                  validator: (value) {
+                    String regExpString =
+                        r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
+                    RegExp regExp = RegExp(regExpString);
+                    if (!regExp.hasMatch(value!)) {
+                      return 'Please enter your email';
+                    } else if (value.isEmpty) {
+                      return "Please enter username";
+                    }
+                    return null;
+                  }),
           const SizedBox(height: 20),
           BlocBuilder<AuthBloc, AuthState>(
             builder: (context, state) {
@@ -113,32 +120,101 @@ class SignupForm extends StatelessWidget {
                     context.read<AuthBloc>().add(CreateAccountFirebase(body));
                   }
                 },
-                title: 'Submit',
+                title: 'Daftar',
                 style: PrimaryClenicButtonStyle.style,
                 isVisibleLoad: isLoading,
               );
             },
           ),
           const SizedBox(height: 20),
-          Row(
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Text(
-                'Already have account ?',
-                style: TextStyle(fontSize: 16),
-              ),
-              const SizedBox(width: 10),
-              GestureDetector(
-                child: Text(
-                  'Login Now',
-                  style: TextStyle(color: Colors.green.shade700, fontSize: 16),
+              Expanded(
+                child: Divider(
+                  thickness: 1,
+                  color: clenicDarkGrey,
                 ),
-                onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const LoginScreen(),
-                  ),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Text('atau'),
+              SizedBox(
+                width: 10,
+              ),
+              Expanded(
+                child: Divider(
+                  thickness: 1,
+                  color: clenicDarkGrey,
                 ),
               ),
             ],
+          ),
+          const SizedBox(height: 20),
+          BlocBuilder<AuthBloc, AuthState>(
+            builder: (context, state) {
+              final bool isLoading = state is CreateUserLoading;
+              return ClenicButton(
+                isDisabled: isLoading,
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    final body = FirebaseAuthRequest(
+                      email: _usernameController.text,
+                      password: _passwordController.text,
+                      //expiresInMins: 30,
+                    );
+                    context.read<AuthBloc>().add(CreateAccountFirebase(body));
+                  }
+                },
+                title: 'Google',
+                leftIcon: SvgPicture.asset('assets/ic_google.svg'),
+                rightIcon: const Icon(
+                  Icons.add,
+                  color: Colors.transparent,
+                ),
+                style: ClenicButtonStyle(
+                  color: clenicWhite,
+                  fill: true,
+                  textColor: clenicBlack,
+                  borderColor: clenicGrey,
+                  disableBorderColor: Colors.grey.shade300,
+                  disableColor: Colors.grey.shade300,
+                  disableTextColor: Colors.grey,
+                ),
+                //isVisibleLoad: isLoading,
+              );
+            },
+          ),
+          Expanded(
+            child: Center(
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const LoginScreen(),
+                    ),
+                  );
+                },
+                child: RichText(
+                  text: const TextSpan(
+                    text: 'Sudah Punya Akun ?',
+                    style: TextStyle(color: clenicDarkGrey, fontSize: 14),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: ' Masuk',
+                        style: TextStyle(
+                          color: clenicPrimary,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 14,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
           ),
         ],
       ),

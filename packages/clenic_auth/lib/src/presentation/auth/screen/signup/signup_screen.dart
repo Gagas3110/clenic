@@ -8,13 +8,16 @@ import '../../../../application/login/auth_bloc.dart';
 import '../../components/signup/signup_body.dart';
 
 class SignupScreen extends StatelessWidget {
-  const SignupScreen({super.key});
+  final int selection;
+  const SignupScreen({super.key, required this.selection});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => getIt<AuthBloc>(),
-      child: const SignupBody(),
+      child: SignupBody(
+        selection: selection,
+      ),
     );
   }
 }
