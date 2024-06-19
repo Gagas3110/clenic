@@ -100,7 +100,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       result.fold(
         (failure) {
           emit(LoginFailed(failure));
-          print('Login failed: $failure');
         },
         (success) => emit(
           LoginSuccessF(success),
@@ -131,7 +130,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         emit(const CurrentTab(0));
       }
     } catch (e) {
-      print(e);
+      throw 'e';
     }
   }
 
@@ -140,9 +139,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     emit(const AuthLoading());
     try {
       await _authRepo.signInWithGoogle();
-      final user = _authRepo.authStateChanges();
-      final currentUser = _authRepo.currentUser;
-      print(currentUser);
       emit(const AuthSuccess());
     } catch (e) {
       emit(AuthFailure(e.toString()));

@@ -9,9 +9,7 @@ import 'package:clenic_auth/src/infrastructure/auth/datasources/local/auth/i_log
 import 'package:clenic_auth/src/infrastructure/auth/datasources/remote/i_auth_remote_datasource.dart';
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
-
 import '../../../domain/auth/repositories/i_auth_repository.dart';
 import '../../../domain/core/network/network_info.dart';
 import '../datasources/remote/api/login_api.dart';

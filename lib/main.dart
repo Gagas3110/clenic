@@ -3,7 +3,6 @@ import 'package:clenic_auth/injection.dart';
 import 'package:clenic_onboarding/clenic_onboarding.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -27,30 +26,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      darkTheme: ThemeData.dark(), // standard dark theme
-      themeMode: ThemeMode.system,
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(textTheme).copyWith(
           bodyMedium: GoogleFonts.poppins(textStyle: textTheme.bodyMedium),
         ),
       ),
-      // home: const MyHomePage(
-      //   title: 'home',
-      // ),
       home: const SplashScreen(),
     );
   }
 }
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SvgPicture.asset('assets/slide1_onboarding.svg'),
-      ),
-    );
-  }
-}

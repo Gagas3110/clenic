@@ -1,7 +1,6 @@
 import 'package:clenic_auth/clenic_auth.dart';
 import 'package:clenic_onboarding/src/application/welcome_package/welcome_package_bloc.dart';
 import 'package:clenic_ui/widgets/buttons/button_styles/clenic_button_styles.dart';
-import 'package:clenic_ui/widgets/buttons/clenic_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
