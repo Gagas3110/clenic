@@ -2,6 +2,7 @@
 
 import 'package:clenic_auth/src/domain/core/extension/clenic_auth_extension.dart';
 import 'package:clenic_auth/src/presentation/auth/components/login/login_form.dart';
+import 'package:clenic_ui/themes/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -14,7 +15,7 @@ class LoginBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Colors.grey.shade100,
+      backgroundColor: clenicWhite,
       body: BlocListener<AuthBloc, AuthState>(
         listener: (context, state) {
           if (state is LoginSuccessF) {

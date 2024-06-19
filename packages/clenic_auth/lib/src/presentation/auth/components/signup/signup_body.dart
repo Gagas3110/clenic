@@ -1,5 +1,6 @@
 import 'package:clenic_auth/src/domain/core/extension/clenic_auth_extension.dart';
 import 'package:clenic_auth/src/presentation/auth/components/signup/signup_form.dart';
+import 'package:clenic_ui/themes/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,7 +14,7 @@ class SignupBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade100,
+      backgroundColor: clenicWhite,
       resizeToAvoidBottomInset: false,
       body: BlocListener<AuthBloc, AuthState>(
         listener: (context, state) {
